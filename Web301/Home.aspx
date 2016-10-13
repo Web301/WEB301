@@ -9,7 +9,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        <asp:CheckBox ID="CheckBox1" runat="server" />
     </div>
     </form>
 </body>
