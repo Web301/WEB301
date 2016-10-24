@@ -11,7 +11,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -37,7 +37,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-       
+
 
         <div class="navbar navbar-inverse  navbar-fixed-top">
             <div class="">
@@ -51,14 +51,16 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">Collections</a></li>
-                        <li><a runat="server" href="~/About">About Us</a></li>
-                        <li><a runat="server" href="~/Contact">Contact Us</a></li>
+                        <li><a runat="server" href="~/"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                        <li><a runat="server" href="~/About"><span class="glyphicon glyphicon-tasks"></span>Products</a></li>
+                        <li><a runat="server" href="~/About"><span class="glyphicon glyphicon-bullhorn"></span>About Us</a></li>
+                        <li><a runat="server" href="~/Contact"><span class="glyphicon glyphicon-earphone"></span>Contact Us</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="#"><span class="glyphicon glyphicon-shopping-cart"></span>
+                                    Cart<span id="spanCount" runat="server" class="badge">0</span></a></li>
                                 <li><a runat="server" href="~/Account/Register">Register</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
                             </ul>
@@ -76,15 +78,16 @@
             </div>
         </div>
         <div class="container">
-    <div class="jumbotron">
-            <div style="display:inline">
-                <asp:Image ID="Image5" runat="server" src="Images/Logo_TV_2015.png" Width="150" Height="100"/>
-            <span id="WebsiteName">t-Print R Us</span>
-                <p id="slogan">Personalise any t-shirt with a picture of your choice</p>
+            <div class="jumbotron">
+                <div style="display: inline">
+                    <asp:Image ID="Image5" runat="server" src="Images/Logo_TV_2015.png" Width="150" Height="100" />
+                    <span id="WebsiteName">t-Print R Us</span>
+                    <p id="slogan">Personalise any t-shirt with a picture of your choice</p>
                 </div>
-    </div>
-         <div class="navbar navbar-inverse ">
-            <div class="container">
+
+            </div>
+            <div class="navbar navbar-inverse ">
+
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
@@ -94,22 +97,61 @@
                     </button>
                 </div>
                 <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">2 for 30</a></li>
                         <li><a runat="server" href="~/">2 for 40</a></li>
                         <li><a runat="server" href="~/">3 for 30</a></li>
                         <li><a runat="server" href="~/">3 for 40</a></li>
                     </ul>
-                    </div>
+                </div>
             </div>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p style="text-align: right; font-size: smaller; font-weight: lighter">&copy; <%: DateTime.Now.Year %> - Claire&Paul</p>
-            </footer>
+            <div class="container">
+                <div class="jumbotron">
+                    <footer>
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="footerFormat">
+                                    <h4>Our Offers</h4>
+                                    <a runat="server" href="~/">2 for 30</a><br>
+                                    <a runat="server" href="~/">2 for 40</a><br>
+                                    <a runat="server" href="~/">3 for 30</a><br>
+                                    <a runat="server" href="~/">3 for 40</a><br>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="footerFormat">
+                                    <h4>Information</h4>
+                                    <a runat="server" href="~/">About Us</a><br>
+                                    <a runat="server" href="~/">Products</a><br>
+                                    <a runat="server" href="~/">Contact US</a><br>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="footerFormat" ">
+                                    <h4>Help</h4>
+                                    <a runat="server" href="~/">Returns</a><br>
+                                    <a runat="server" href="~/">Deliveries</a><br>
+                                    <a runat="server" href="~/">FAQ</a><br>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3" style="background-color:darkgray">
+                                <h3>Contact Us</h3>
+                               <h4>07191-12345</h4>
+                                <p><a href="Contact.aspx"class="btn btn-primary btn-md">Contact Us Now</a></p>
+                            </div>
+                                
+                        </div>
+                        <p style="text-align: left; font-size: smaller; padding-top: 2em; font-weight: lighter">&copy; <%: DateTime.Now.Year %> - Claire&Paul</p>
+                    </footer>
+                </div>
+            </div>
         </div>
     </form>
 </body>

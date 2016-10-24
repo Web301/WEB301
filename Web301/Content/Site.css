@@ -10,7 +10,18 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+.nav li .badge {
+    margin-left: 0.5em;
+}
 
+.nav li .glyphicon {
+    margin-right: 0.5em;
+    padding-right: 0.5em;
+}
+.footerFormat{
+    line-height:1.5em;
+    font-size:medium;
+}
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
