@@ -80,7 +80,7 @@
         <div class="container">
             <div class="jumbotron">
                 <div style="display: inline">
-                    <asp:Image ID="Image5" runat="server" src="Images/Logo_TV_2015.png" Width="150" Height="100" />
+                    <asp:Image ID="Image5" runat="server" src="/Images/Logo_TV_2015.png" Width="150" Height="100" />
                     <span id="WebsiteName">t-Print R Us</span>
                     <p id="slogan">Personalise any t-shirt with a picture of your choice</p>
                 </div>

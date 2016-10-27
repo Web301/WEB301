@@ -8,6 +8,6 @@
     <asp:Image ID="Image3" runat="server" src="Images/tshirt.jpeg" Width="250" Height="200" />
     <asp:Image ID="Image4" runat="server" src="Images/tshirt.jpeg" Width="250" Height="200" />
 
-</div>
+
 
 </asp:Content>
