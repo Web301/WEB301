@@ -55,11 +55,15 @@
                         <li><a runat="server" href="~/Products"><span class="glyphicon glyphicon-tasks"></span>Products</a></li>
                         <li><a runat="server" href="~/About"><span class="glyphicon glyphicon-bullhorn"></span>About Us</a></li>
                         <li><a runat="server" href="~/Contact"><span class="glyphicon glyphicon-earphone"></span>Contact Us</a></li>
+                        <li runat="server"> 
+                        <asp:HyperLink NavigateUrl="~/Order.aspx" runat="server">
+                            <span class="glyphicon glyphicon-home"></span>Order
+                        </asp:HyperLink></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="#"><span class="glyphicon glyphicon-shopping-cart"></span>
+                                <li><a runat="server" href="~/Cart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span>
                                     Cart<span id="spanCount" runat="server" class="badge">0</span></a></li>
                                 <li><a runat="server" href="~/Account/Register">Register</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
@@ -84,6 +88,8 @@
                     <span id="WebsiteName">t-Print R Us</span>
                     <p id="slogan">Personalise any t-shirt with a picture of your choice</p>
                 </div>
+
+                <%--ADD BREADRUMB & HEADER LABEL--%>
 
             </div>
             <div class="navbar navbar-inverse ">

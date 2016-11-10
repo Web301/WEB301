@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 using Microsoft.AspNet.Identity;
 
 namespace Web301
@@ -67,9 +68,16 @@ namespace Web301
             }
         }
 
+        // set cart count in PreRender event handler because count 
+        // can get out of sync if set it in Load
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+                        
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
