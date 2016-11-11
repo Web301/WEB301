@@ -27,8 +27,8 @@
                 <div class="col-sm-12">
                     <asp:Button ID="btnContinue" runat="server"
                         PostBackUrl="~/Order.aspx" Text="Continue Shopping" CssClass="btn" OnClick="btnContinue_Click" />
-                    <asp:Button ID="btnCheckOut" runat="server" Text="Check Out"  
-                        CssClass="btn" OnClick="btnCheckOut_Click" />
+                    <asp:Button ID="btnCheckOut" runat="server"
+                        PostBackUrl="~/CheckOut1.aspx" Text="Check Out" CssClass="btn" OnClick="btnCheckOut_Click" />
                 </div>
             </div>
         </div>

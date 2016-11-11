@@ -8,9 +8,9 @@
         <label class="control-label col-sm-2">Choose one:</label>
         <div class="col-sm-10">
             <asp:RadioButtonList ID="rblShipping" runat="server">
-                <asp:ListItem Selected="True">UPS Ground</asp:ListItem>
-                <asp:ListItem>UPS Second Day</asp:ListItem>
-                <asp:ListItem>Federal Express Overnight</asp:ListItem>
+                <asp:ListItem Selected="True">An Post First Class</asp:ListItem>
+                <asp:ListItem>Two Day Courier</asp:ListItem>
+                <asp:ListItem>Overnight Express </asp:ListItem>
             </asp:RadioButtonList>
         </div>
     </div>

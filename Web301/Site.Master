@@ -89,7 +89,7 @@
                     <p id="slogan">Personalise any t-shirt with a picture of your choice</p>
                 </div>
 
-                <%--ADD BREADRUMB & HEADER LABEL--%>
+                <%--ADD BREADRUMB LABEL--%>
 
             </div>
             <div class="navbar navbar-inverse ">
