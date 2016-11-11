@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,24 +14,15 @@ namespace Web301
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            cart = CartItemList.GetCart(); // get on all postbacks
-
-            if (!IsPostBack) // do on initial load
-            { 
-                //Master.HeaderText = "Your Shopping Cart";
-
-                //Master.AddBreadcrumbLink("/Order.aspx", "Home");
-                //Master.AddCurrentPage("Cart");
-
+            cart = CartItemList.GetCart();
+            if (!IsPostBack)
                 this.DisplayCart();
-            }
         }
 
         private void DisplayCart()
         {
             lstCart.Items.Clear();
             CartItem item;
-
             for (int i = 0; i < cart.Count; i++)
             {
                 item = cart[i];
@@ -65,7 +57,14 @@ namespace Web301
 
         protected void btnCheckOut_Click(object sender, EventArgs e)
         {
-            lblMessage.Text = "Sorry, that function hasn't been implemented yet.";
+            string url = ConfigurationManager.AppSettings["SecurePath"] + "CheckOut1.aspx";
+            Response.Redirect(url);
+        }
+
+        protected void btnContinue_Click(object sender, EventArgs e)
+        {
+            string url = ConfigurationManager.AppSettings["UnsecurePath"] + "Order.aspx";
+            Response.Redirect(url);
         }
     }
 }

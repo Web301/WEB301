@@ -220,6 +220,9 @@
       <DependentUpon>aspnet-Web301-20161012034512.mdf</DependentUpon>
     </Content>
     <Content Include="Cart.aspx" />
+    <Content Include="CheckOut1.aspx" />
+    <Content Include="CheckOut2.aspx" />
+    <Content Include="Confirmation.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -406,6 +409,27 @@
     <Compile Include="Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CheckOut1.aspx.cs">
+      <DependentUpon>CheckOut1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckOut1.aspx.designer.cs">
+      <DependentUpon>CheckOut1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut2.aspx.cs">
+      <DependentUpon>CheckOut2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckOut2.aspx.designer.cs">
+      <DependentUpon>CheckOut2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -432,6 +456,7 @@
     </Compile>
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\CartItemList.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Order.aspx.cs">
