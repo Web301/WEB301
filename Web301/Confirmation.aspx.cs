@@ -12,6 +12,10 @@ namespace Web301
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Master.AddBreadcrumbLink("/Confirmation.aspx", "Home");
+
+            string header = "Confirmation";
+            Master.HeaderText = header;
             var customer = (Customer)Session["Customer"];
             var date = DateTime.Today.AddDays(1).ToShortDateString();
             lblConfirm.Text = $"Thank you for your order, {customer.FirstName}! It will be shipped on {date}.";

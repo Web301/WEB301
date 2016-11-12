@@ -13,6 +13,15 @@ namespace Web301 {
     public partial class SiteMaster {
         
         /// <summary>
+        /// navList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navList;
+        
+        /// <summary>
         /// Image5 control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,33 @@ namespace Web301 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image5;
+        
+        /// <summary>
+        /// litBreadcrumb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litBreadcrumb;
+        
+        /// <summary>
+        /// lblPageHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPageHeader;
+        
+        /// <summary>
+        /// mainPlaceholder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder mainPlaceholder;
         
         /// <summary>
         /// MainContent control.

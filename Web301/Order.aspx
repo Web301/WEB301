@@ -5,52 +5,47 @@
 
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="MainContent" runat="server">
+      <h2><%: Title %>.</h2>
+    <h3>Product page.</h3>
     <div class="row">
         <%-- row 1 
         <div class="col-sm-8">
             <%-- product drop down and info column --%>
-           <%-- <div class="form-group">
+        <%-- <div class="form-group">
                 <label class="col-sm-5">Please select a product:</label>
                 <div class="col-sm-6">--%>
-                    <%--<asp:DropDownList ID="ddlProducts" runat="server" AutoPostBack="True" 
+        <%--<asp:DropDownList ID="ddlProducts" runat="server" AutoPostBack="True" 
                         DataSourceID="SqlDataSource1" DataTextField="Name" 
                         DataValueField="ProductID" CssClass="form-control">
                     </asp:DropDownList>--%>
-                    <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                        ConnectionString='<%$ ConnectionStrings:HalloweenConnection %>' 
-                        SelectCommand="SELECT [ProductID], [Name], [ShortDescription], 
-                        [LongDescription], [ImageFile], [UnitPrice] FROM [Products] 
-                        ORDER BY [Name]">
-                    </asp:SqlDataSource>--%>
-                    
-                </div>
+    </div>
     <div class="container">
-                <div class="row">
-                    <asp:Repeater ID="Repeater1" runat="server">
-                        <ItemTemplate>
-                            <div class="col-sm-4">
-                                <div class="thumbnail">
-                                    <img src='/Images/Products/<%# Eval("ImageFile") %>'
-                                        alt='<%# Eval("ProductName") %>' />
-                                    <div class="caption">
-                                        <h3><%# Eval("ProductShortDescription") %></h3>
-                                        <p>
-                                            <b>Price: <%# Eval("UnitPrice", "{0:c}") %></b>
-                                            <br>
-                                            <br>
-                                            <%# Eval("ProductLongDescription") %>
-                                        </p>
-                                    </div>
-                                </div>
+        <div class="row">
+            <asp:Repeater ID="Repeater1" runat="server">
+                <ItemTemplate>
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src='/Images/Products/<%# Eval("ImageFile") %>'
+                                alt='<%# Eval("ProductName") %>' />
+                            <div class="caption">
+                                <h3><%# Eval("ProductShortDescription") %></h3>
+                                <p>
+                                    <b>Price: <%# Eval("UnitPrice", "{0:c}") %></b>
+                                    <br>
+                                    <br>
+                                    <%# Eval("ProductLongDescription") %>
+                                </p>
                             </div>
-                        </ItemTemplate>
-                    </asp:Repeater>
-                </div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
-                        SelectCommand="SELECT [ProductName], [ProductShortDescription], [ProductLongDescription], [ImageFile], [UnitPrice] 
+    </div>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
+        SelectCommand="SELECT [ProductName], [ProductShortDescription], [ProductLongDescription], [ImageFile], [UnitPrice] 
                         FROM [Products]"></asp:SqlDataSource>
-            <%--div>
+    <%--div>
             <div class="form-group">
                 <div class="col-sm-12">
                     <h4>

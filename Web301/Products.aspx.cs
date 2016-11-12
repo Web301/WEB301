@@ -13,6 +13,12 @@ namespace Web301
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Master.AddBreadcrumbLink("/Order.aspx", "Home");
+
+            string header = "Our Products";
+            Master.HeaderText = header;
+            Master.AddCurrentPage("Products");
+
             if (!IsPostBack)
             {
                 string[] filePaths = Directory.GetFiles(Server.MapPath("~/Images/"));

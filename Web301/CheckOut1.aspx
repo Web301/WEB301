@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CheckOut1.aspx.cs" Inherits="Web301.CheckOut1" %>
-
+<%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <h1>Check Out Page</h1>
 

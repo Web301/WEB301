@@ -50,7 +50,8 @@
                     </button>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" runat="server" id="navList" >
+                     
                         <li><a runat="server" href="~/"><span class="glyphicon glyphicon-home"></span>Home</a></li>
                         <li><a runat="server" href="~/Products"><span class="glyphicon glyphicon-tasks"></span>Products</a></li>
                         <li><a runat="server" href="~/About"><span class="glyphicon glyphicon-bullhorn"></span>About Us</a></li>
@@ -88,8 +89,15 @@
                     <span id="WebsiteName">t-Print R Us</span>
                     <p id="slogan">Personalise any t-shirt with a picture of your choice</p>
                 </div>
-
-                <%--ADD BREADRUMB LABEL--%>
+                <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <asp:Literal ID="litBreadcrumb" runat="server"></asp:Literal>
+                    </ol>
+                    <h1><asp:Label ID="lblPageHeader" runat="server"></asp:Label></h1>
+                    <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+              
 
             </div>
             <div class="navbar navbar-inverse ">

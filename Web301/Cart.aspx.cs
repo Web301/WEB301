@@ -14,6 +14,11 @@ namespace Web301
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Master.AddBreadcrumbLink("/Cart.aspx", "Home");
+
+            string header = "Cart";
+            Master.HeaderText = header;
+
             cart = CartItemList.GetCart();
             if (!IsPostBack)
                 this.DisplayCart();

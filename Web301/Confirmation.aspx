@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Confirmation.aspx.cs" Inherits="Web301.Confirmation" %>
-
+<%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <h1>Confirmation</h1>
     <div class="row">

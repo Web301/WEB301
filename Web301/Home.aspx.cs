@@ -11,7 +11,10 @@ namespace Web301
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Master.AddBreadcrumbLink("/Home.aspx", "Home");
 
+            string header = "Our Products";
+            Master.HeaderText = header;
         }
     }
 }

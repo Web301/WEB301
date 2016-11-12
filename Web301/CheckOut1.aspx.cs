@@ -12,6 +12,11 @@ namespace Web301
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Master.AddBreadcrumbLink("/CheckOut1.aspx", "Home");
+
+            string header = "Checkout";
+            Master.HeaderText = header;
+            Master.AddCurrentPage("Checkout");
             if (!Request.IsSecureConnection)
             {
                 string url = ConfigurationManager.AppSettings["SecurePath"] + "CheckOut1.aspx";

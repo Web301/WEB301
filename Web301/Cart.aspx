@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Your Shopping Cart" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="Web301.Cart" %>
-
+<%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ID="mainContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Your Shopping Cart</h1>
     <div class="row"><%-- row 1 --%>

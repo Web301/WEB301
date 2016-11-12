@@ -11,7 +11,11 @@ namespace Web301
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Master.AddBreadcrumbLink("/Contact.aspx", "Home");
 
+            string header = "Contact Us";
+            Master.HeaderText = header;
+            Master.AddCurrentPage("Contact");
         }
     }
 }

@@ -56,5 +56,17 @@ namespace Web301 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new Web301.SiteMaster Master {
+            get {
+                return ((Web301.SiteMaster)(base.Master));
+            }
+        }
     }
 }
