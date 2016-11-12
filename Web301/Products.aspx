@@ -8,7 +8,7 @@
 <hr />
 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" ShowHeader="false">
     <Columns>
-        <asp:BoundField DataField="Text" />
+        <%--<asp:BoundField DataField="Text" />--%>
         <asp:ImageField DataImageUrlField="Value" ControlStyle-Height="100" ControlStyle-Width="100" />
     </Columns>
 </asp:GridView>
