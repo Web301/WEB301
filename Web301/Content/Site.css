@@ -13,6 +13,15 @@ body {
 .nav li .badge {
     margin-left: 0.5em;
 }
+.thumbnail {
+    min-height: 34em;
+    margin-bottom:5em;
+}
+
+.thumbnail img {
+    height: 20em;
+    width: 20em;
+}
 
 .nav li .glyphicon {
     margin-right: 0.5em;

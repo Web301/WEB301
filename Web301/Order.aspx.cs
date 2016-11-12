@@ -15,6 +15,7 @@ namespace Web301
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Repeater1.DataSourceID = "SqlDataSource1";
             //// bind dropdown and set breadcrumb on first load;    
             //if (!IsPostBack)
             //{
