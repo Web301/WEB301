@@ -22,6 +22,7 @@ namespace Web301
             if (!IsPostBack)
             {
                 string[] filePaths = Directory.GetFiles(Server.MapPath("~/Images/"));
+                
                 List<ListItem> files = new List<ListItem>();
                 foreach (string filePath in filePaths)
                 {

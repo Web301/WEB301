@@ -6,14 +6,15 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> t-shirts R Us</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link type="text/css" rel="stylesheet" href="Content/owl.carousel.css" />
+    <link type="text/css" rel="stylesheet" href="Content/owl.theme.css" />
 </head>
 <body>
     <form runat="server">
@@ -34,11 +35,14 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
+               <%-- <asp:ScriptReference Name="owl.carousel.min.js" Assembly="System.Web"  Path="~/Scripts/WebForms/owl.carousel.min.js"/>
+                <asp:ScriptReference Name="owl.carousel.js"  Assembly="System.Web" Path="~/Scripts/WebForms/owl.carousel.js"/>--%>
                 <%--Site Scripts--%>
-            </Scripts>
+            </Scripts>          
         </asp:ScriptManager>
 
-
+        <script src="/Scripts/WebForms/owl.carousel.js"></script>
+        <script src="/Scripts/WebForms/owl.carousel.min.js"></script>
         <div class="navbar navbar-inverse  navbar-fixed-top">
             <div class="">
                 <div class="navbar-header">

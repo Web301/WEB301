@@ -10,6 +10,14 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+#owl-example .item{
+  margin: 3px;
+}
+#owl-example .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .nav li .badge {
     margin-left: 0.5em;
 }
