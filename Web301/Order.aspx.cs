@@ -15,7 +15,7 @@ namespace Web301
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Master.AddBreadcrumbLink("/Order.aspx", "Home");
+            Master.AddBreadcrumbLink("/Order.aspx", "Order");
 
             string header = "Order";
             Master.HeaderText = header;
@@ -24,7 +24,7 @@ namespace Web301
             //if (!IsPostBack)
             //{
             //    ddlProducts.DataBind();
-                Master.AddCurrentPage("Home");
+                Master.AddCurrentPage("Order");
             //}
             //// get and show product data on every load
             //selectedProduct = this.GetSelectedProduct();

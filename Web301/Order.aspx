@@ -5,8 +5,7 @@
 
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="MainContent" runat="server">
-      <h2><%: Title %>.</h2>
-    <h3>Product page.</h3>
+  
     <div class="row">
         <%-- row 1 
         <div class="col-sm-8">

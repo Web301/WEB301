@@ -89,14 +89,7 @@
                     <span id="WebsiteName">t-Print R Us</span>
                     <p id="slogan">Personalise any t-shirt with a picture of your choice</p>
                 </div>
-                <div class="col-sm-12">
-                    <ol class="breadcrumb">
-                        <asp:Literal ID="litBreadcrumb" runat="server"></asp:Literal>
-                    </ol>
-                    <h1><asp:Label ID="lblPageHeader" runat="server"></asp:Label></h1>
-                    <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
+               
               
 
             </div>
@@ -119,6 +112,16 @@
                     </ul>
                 </div>
             </div>
+            
+             <div  ">
+                    <ol class="breadcrumb">
+                        <asp:Literal ID="litBreadcrumb" runat="server"></asp:Literal>
+                    </ol>
+                    <h1><asp:Label ID="lblPageHeader" runat="server"></asp:Label></h1>
+                    <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
