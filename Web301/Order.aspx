@@ -45,13 +45,13 @@
                     <asp:TextBox ID="txtQuantity" runat="server" 
                         CssClass="form-control"></asp:TextBox></div>
                 <div class="col-sm-7">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="text-danger"
+                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="text-danger"
                         runat="server" ControlToValidate="txtQuantity" Display="Dynamic" 
                         ErrorMessage="Quantity is a required field."></asp:RequiredFieldValidator>
                     <asp:RangeValidator ID="RangeValidator1" runat="server" CssClass="text-danger" 
                         ControlToValidate="txtQuantity" Display="Dynamic" 
                         ErrorMessage="Quantity must range from 1 to 500."
-                        MaximumValue="500" MinimumValue="1" Type="Integer"></asp:RangeValidator></div>
+                        MaximumValue="500" MinimumValue="1" Type="Integer"></asp:RangeValidator></div>--%>
             </div>
             <div class="form-group">
                 <div class="col-sm-12">
@@ -63,6 +63,14 @@
                         CausesValidation="False" CssClass="btn" OnClick="btnCheckOut_Click" />
                 </div>
             </div>
+
+            <div>
+                <p>Twitter message:<br /><asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>
+                <p>Twitter Image:<br /> <asp:FileUpload runat="server" id="FileUpload1" /></p>
+                <asp:Button ID="btnTwit" runat="server" Text="Tweet" OnClick="btnTwit_Click" /><hr />
+                <asp:Label ID="lblResult" runat="server" EnableViewState="false" />
+            </div>
+
         </div>
     </div><%-- end of row 2 --%>
 
