@@ -12,6 +12,7 @@
             <div class="form-group">
                 <div class="col-sm-12"><asp:Button ID="btnRemove" runat="server" 
                     Text="Remove Item" onclick="btnRemove_Click" CssClass="btn" /></div>
+        <br />
                 <div class="col-sm-12"><asp:Button ID="btnEmpty" runat="server" 
                     Text="Empty Cart" onclick="btnEmpty_Click" CssClass="btn" /></div>
             </div>

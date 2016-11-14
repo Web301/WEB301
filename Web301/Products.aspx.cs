@@ -18,6 +18,7 @@ namespace Web301
             string header = "Our Products";
             Master.HeaderText = header;
             Master.AddCurrentPage("Products");
+            Repeater1.DataSourceID = "SqlDataSource1";
 
             if (!IsPostBack)
             {
@@ -29,20 +30,20 @@ namespace Web301
                     string fileName = Path.GetFileName(filePath);
                     files.Add(new ListItem(fileName, "~/Images/" + fileName));
                 }
-                GridView1.DataSource = files;
-                GridView1.DataBind();
+                //GridView1.DataSource = files;
+                //GridView1.DataBind();
             }
         }
         protected void Upload(object sender, EventArgs e)
         {
-            if (FileUpload1.HasFile)
-            {
-                string fileName = Path.GetFileName(FileUpload1.PostedFile.FileName);
-                FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Images/") + fileName);
-                Response.Redirect(Request.Url.AbsoluteUri);
-                GridView1.DataSource = fileName;
-                GridView1.DataBind();
-            }
+            //if (FileUpload1.HasFile)
+            //{
+            //    string fileName = Path.GetFileName(FileUpload1.PostedFile.FileName);
+            //    FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Images/") + fileName);
+            //    Response.Redirect(Request.Url.AbsoluteUri);
+            //    GridView1.DataSource = fileName;
+            //    GridView1.DataBind();
+            //}
         }
     }
    

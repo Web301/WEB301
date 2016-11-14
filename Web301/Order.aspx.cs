@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 // make sure to include this namespace
 using System.Data;
+using System.Configuration;
 
 namespace Web301
 {
@@ -15,45 +16,45 @@ namespace Web301
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Master.AddBreadcrumbLink("/Order.aspx", "Order");
+            //Master.AddBreadcrumbLink("/Order.aspx", "Order");
 
-            string header = "Order";
-            Master.HeaderText = header;
-            Repeater1.DataSourceID = "SqlDataSource1";
-            //// bind dropdown and set breadcrumb on first load;    
-            //if (!IsPostBack)
-            //{
-            //    ddlProducts.DataBind();
-                Master.AddCurrentPage("Order");
-            //}
-            //// get and show product data on every load
-            //selectedProduct = this.GetSelectedProduct();
-            //lblName.Text = selectedProduct.Name;
-            //lblShortDescription.Text = selectedProduct.ShortDescription;
-            //lblLongDescription.Text = selectedProduct.LongDescription;
-            //lblUnitPrice.Text = selectedProduct.UnitPrice.ToString("c") + " each";
-            //imgProduct.ImageUrl = "Images/Products/" + selectedProduct.ImageFile;
+           // string header = "Order";
+           // Master.HeaderText = header;
+            //Repeater1.DataSourceID = "SqlDataSource1";
+            // bind dropdown and set breadcrumb on first load;    
+            if (!IsPostBack)
+            {
+                ddlProducts.DataBind();
+                //Master.AddCurrentPage("Order");
+            }
+            // get and show product data on every load
+            selectedProduct = this.GetSelectedProduct();
+            lblName.Text = selectedProduct.Name;
+            lblShortDescription.Text = selectedProduct.ShortDescription;
+            lblLongDescription.Text = selectedProduct.LongDescription;
+            lblUnitPrice.Text = selectedProduct.UnitPrice.ToString("c") + " each";
+            imgProduct.ImageUrl = "Images/Products/" + selectedProduct.ImageFile;
         }
 
-        //private Product GetSelectedProduct()
-        //{
-        //    // get row from SqlDataSource based on value in dropdownlist
-        //    DataView productsTable = (DataView)
-        //        SqlDataSource1.Select(DataSourceSelectArguments.Empty);
-        //    productsTable.RowFilter =
-        //        "ProductID = '" + ddlProducts.SelectedValue + "'";
-        //    DataRowView row = productsTable[0];
+        private Product GetSelectedProduct()
+        {
+            // get row from SqlDataSource based on value in dropdownlist
+            DataView productsTable = (DataView)
+                SqlDataSource1.Select(DataSourceSelectArguments.Empty);
+            productsTable.RowFilter =
+                "ProductID = '" + ddlProducts.SelectedValue + "'";
+            DataRowView row = productsTable[0];
 
-        //    // create a new product object and load with data from row
-        //    Product p = new Product();
-        //    p.ProductID = row["ProductID"].ToString();
-        //    p.Name = row["Name"].ToString();
-        //    p.ShortDescription = row["ShortDescription"].ToString();
-        //    p.LongDescription = row["LongDescription"].ToString();
-        //    p.UnitPrice = (decimal)row["UnitPrice"];
-        //    p.ImageFile = row["ImageFile"].ToString();
-        //    return p;
-        //}
+            // create a new product object and load with data from row
+            Product p = new Product();
+            p.ProductID = row["ProductID"].ToString();
+            p.Name = row["ProductName"].ToString();
+            p.ShortDescription = row["ProductShortDescription"].ToString();
+            p.LongDescription = row["ProductLongDescription"].ToString();
+            p.UnitPrice = (decimal)row["UnitPrice"];
+            p.ImageFile = row["ImageFile"].ToString();
+            return p;
+        }
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
@@ -75,6 +76,12 @@ namespace Web301
                 }
                 Response.Redirect("Cart.aspx");
             }
+        }
+
+        protected void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            string url = ConfigurationManager.AppSettings["SecurePath"] + "CheckOut1.aspx";
+            Response.Redirect(url);
         }
     }
 }
