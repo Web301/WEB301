@@ -11,6 +11,14 @@ namespace Web301.Account
 {
     public partial class Register : Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Master.AddBreadcrumbLink("/Register.aspx", "Home");
+
+            string header = "Register";
+            Master.HeaderText = header;
+            Master.AddCurrentPage("Register");
+        }
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();

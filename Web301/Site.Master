@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> t-shirts R Us</title>
+    <title><%: Page.Title %> t-Prints R Us</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="Content/owl.theme.css" />
 </head>
 <body>
-    <form runat="server">
+    <form runat="server" class="form-horizontal">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -62,7 +62,7 @@
                         <li><a runat="server" href="~/Contact"><span class="glyphicon glyphicon-earphone"></span>Contact Us</a></li>
                         <li runat="server"> 
                         <asp:HyperLink NavigateUrl="~/Order.aspx" runat="server">
-                            <span class="glyphicon glyphicon-home"></span>Order
+                            <span class="glyphicon glyphicon-plus"></span>Order
                         </asp:HyperLink></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
@@ -97,7 +97,7 @@
               
 
             </div>
-            <div class="navbar navbar-inverse ">
+          <%--  <div class="navbar navbar-inverse ">
 
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -115,13 +115,13 @@
                         <li><a runat="server" href="~/">3 for 40</a></li>
                     </ul>
                 </div>
-            </div>
+            </div>--%>
             
-             <div  ">
+             <div>
                     <ol class="breadcrumb">
-                        <asp:Literal ID="litBreadcrumb" runat="server"></asp:Literal>
+                        <asp:Literal ID="litBreadcrumb" runat="server" ></asp:Literal>
                     </ol>
-                    <h1><asp:Label ID="lblPageHeader" runat="server"></asp:Label></h1>
+                    <h1><asp:Label ID="lblPageHeader" runat="server" ></asp:Label></h1>
                     <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
@@ -135,16 +135,7 @@
                 <div class="jumbotron">
                     <footer>
                         <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="footerFormat">
-                                    <h4>Our Offers</h4>
-                                    <a runat="server" href="~/">2 for 30</a><br>
-                                    <a runat="server" href="~/">2 for 40</a><br>
-                                    <a runat="server" href="~/">3 for 30</a><br>
-                                    <a runat="server" href="~/">3 for 40</a><br>
-                                </div>
-                            </div>
+                           
                             <div class="col-md-3">
                                 <div class="footerFormat">
                                     <h4>Information</h4>
@@ -161,7 +152,16 @@
                                     <a runat="server" href="~/">FAQ</a><br>
                                 </div>
                             </div>
-                            
+                             <div class="col-md-3">
+
+                                <div class="footerFormat">
+                                    <%--<h4>Our Offers</h4>
+                                    <a runat="server" href="~/">2 for 30</a><br>
+                                    <a runat="server" href="~/">2 for 40</a><br>
+                                    <a runat="server" href="~/">3 for 30</a><br>
+                                    <a runat="server" href="~/">3 for 40</a><br>--%>
+                                </div>
+                            </div>
                             <div class="col-md-3" style="background-color:darkgray">
                                 <h3>Contact Us</h3>
                                <h4>07191-12345</h4>

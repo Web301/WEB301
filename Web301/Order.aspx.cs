@@ -18,16 +18,17 @@ namespace Web301
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Master.AddBreadcrumbLink("/Order.aspx", "Order");
+            Master.AddBreadcrumbLink("/Order.aspx", "Order");
 
-           // string header = "Order";
-           // Master.HeaderText = header;
+           string header = "Order";
+           Master.HeaderText = header;
+           Master.AddCurrentPage("Order");
             //Repeater1.DataSourceID = "SqlDataSource1";
             // bind dropdown and set breadcrumb on first load;    
             if (!IsPostBack)
             {
                 ddlProducts.DataBind();
-                //Master.AddCurrentPage("Order");
+                
             }
             // get and show product data on every load
             selectedProduct = this.GetSelectedProduct();

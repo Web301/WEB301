@@ -18,6 +18,7 @@ namespace Web301
 
             string header = "Cart";
             Master.HeaderText = header;
+            Master.AddCurrentPage("Cart");
 
             cart = CartItemList.GetCart();
             if (!IsPostBack)

@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Web301.Order" %>
 
-<%--<%@ MasterType VirtualPath="~/Site.Master" %>--%>
+<%@ MasterType VirtualPath="~/Site.Master" %>
 
 
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="MainContent" runat="server">
 
-
+    <div class="container">
         <div class="row"><%-- row 1 --%>
         <div class="col-sm-8"><%-- product drop down and info column --%>
             <div class="form-group">
@@ -42,9 +42,11 @@
             <div class="form-group">
                 <label class="col-sm-2">Quantity:</label>
                 <div class="col-sm-3">
-                    <asp:TextBox ID="txtQuantity" runat="server" 
-                        CssClass="form-control"></asp:TextBox></div>
-                <div class="col-sm-7">
+                    <%--<asp:TextBox ID="txtQuantity" runat="server" 
+                        CssClass="form-control"></asp:TextBox></div>--%>
+                <asp:TextBox ID="txtQuantity" runat="server" class="form-control"></asp:TextBox>
+                    </div>
+                <%--<div class="col-sm-7">
                     <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="text-danger"
                         runat="server" ControlToValidate="txtQuantity" Display="Dynamic" 
                         ErrorMessage="Quantity is a required field."></asp:RequiredFieldValidator>
@@ -52,6 +54,7 @@
                         ControlToValidate="txtQuantity" Display="Dynamic" 
                         ErrorMessage="Quantity must range from 1 to 500."
                         MaximumValue="500" MinimumValue="1" Type="Integer"></asp:RangeValidator></div>--%>
+                    </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-12">
@@ -71,9 +74,9 @@
                 <asp:Label ID="lblResult" runat="server" EnableViewState="false" />
             </div>
 
-        </div>
+        
     </div><%-- end of row 2 --%>
-
+    </div>
 
 
   
