@@ -16,7 +16,7 @@ namespace Web301
         {
             Master.AddBreadcrumbLink("/Cart.aspx", "Home");
 
-            string header = "Cart";
+            string header = "Your Shopping Cart";
             Master.HeaderText = header;
             Master.AddCurrentPage("Cart");
 

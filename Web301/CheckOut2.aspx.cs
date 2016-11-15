@@ -14,7 +14,7 @@ namespace Web301
         {
             Master.AddBreadcrumbLink("/CheckOut2.aspx", "Home");
 
-            string header = "Checkout";
+            string header = "Shipping and Payment";
             Master.HeaderText = header;
             Master.AddCurrentPage("Checkout");
             if (!Request.IsSecureConnection)

@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CheckOut2.aspx.cs" Inherits="Web301.CheckOut2" %>
 <%@ MasterType VirtualPath="~/Site.Master" %>
-<asp:Content ContentPlaceHolderID="MainContent" runat="server">
-    <h1>Shipping And Payment</h1>
-
+<asp:Content ContentPlaceHolderID="MainContent" runat="server"> 
+    
+<div class="container">
     <h3>Shipping Method</h3>
     <div class="form-group">
         <label class="control-label col-sm-2">Choose one:</label>
@@ -67,4 +67,5 @@
                 CausesValidation="False" CssClass="btn" OnClick="btnContinue_Click" />
         </div>
     </div>
+</div>
 </asp:Content>

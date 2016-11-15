@@ -18,17 +18,15 @@ namespace Web301
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Master.AddBreadcrumbLink("/Order.aspx", "Order");
-
-           string header = "Order";
-           Master.HeaderText = header;
-           Master.AddCurrentPage("Order");
-            //Repeater1.DataSourceID = "SqlDataSource1";
+            string header = "Order";
+            Master.HeaderText = header;
+           
             // bind dropdown and set breadcrumb on first load;    
             if (!IsPostBack)
             {
                 ddlProducts.DataBind();
-                
+                Master.AddBreadcrumbLink("/Order.aspx", "Order");
+                Master.AddCurrentPage("Order");
             }
             // get and show product data on every load
             selectedProduct = this.GetSelectedProduct();
@@ -89,9 +87,6 @@ namespace Web301
 
         protected void btnTwit_Click(object sender, EventArgs e)
         {
-
-
-
             string key = "OVIhqFJyhxqBPMYuEe4PgH2Sw";
             string secret = "3RoUbDb0yDw7Z7ohU2uIhq2g6RU0DeXjFBRWkC1s2Tr9baalWB";
             string token = "232583683-Ji1xOzEWQkrC75cUlo2YCOYEUrpeLudw3hVV0i4v";
@@ -120,7 +115,7 @@ namespace Web301
                         Status = message,
                         Images = new Dictionary<string, Stream> { { "john", stream } }
                     });
-                    //lblResult.Text = result.Text.ToString();
+                    lblResult.Text = result.Text.ToString();
                 }
             }
             else // just message
