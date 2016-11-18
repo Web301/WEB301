@@ -30,24 +30,24 @@ namespace Web301
             if (!IsPostBack) // do on initial load
             {
                 // loop the navigation li elements to mark the active page 
-                foreach (Control ctl in navList.Controls)
-                {
-                    if (ctl is HtmlGenericControl)
-                    {
-                        // get the current li element and its child <a> element
-                        var li = (HtmlGenericControl)ctl;
-                        var a = (HyperLink)li.Controls[1];
+                //foreach (Control ctl in navList.Controls)
+                //{
+                //    if (ctl is HtmlGenericControl)
+                //    {
+                //        // get the current li element and its child <a> element
+                //        var li = (HtmlGenericControl)ctl;
+                //        var a = (HyperLink)li.Controls[1];
 
-                        // if the current navigation li element is the active page...
-                        if (Page.AppRelativeVirtualPath.Contains(a.NavigateUrl))
-                        {
-                            // set Bootstrap active class
-                            li.Attributes.Add("class", "active");
+                //        // if the current navigation li element is the active page...
+                //        if (Page.AppRelativeVirtualPath.Contains(a.NavigateUrl))
+                //        {
+                //            // set Bootstrap active class
+                //            li.Attributes.Add("class", "active");
 
-                            return; // exit loop because we've marked the current navigation link as active 
-                        }
-                    }
-                }
+                //            return; // exit loop because we've marked the current navigation link as active 
+                //        }
+                //    }
+                //}
             }
         }
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
@@ -110,7 +110,12 @@ namespace Web301
         {
             // set cart count in PreRender event handler because count 
             // can get out of sync if set it in Load
-            // spanCount.InnerText = CartItemList.GetCart().Count.ToString();           
+
+            //spanCount.InnerText = CartItemList.GetCart().Quantity.ToString();
+            spanCount.InnerText = CartItemList.GetCart().Count.ToString();
+
+            //Order o = new Order();
+            //spanCount.InnerText = o.CartCount();
         }
 
     

@@ -13,13 +13,22 @@ namespace Web301 {
     public partial class SiteMaster {
         
         /// <summary>
-        /// navList control.
+        /// Ul1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl navList;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Ul1;
+        
+        /// <summary>
+        /// spanCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanCount;
         
         /// <summary>
         /// Image5 control.
