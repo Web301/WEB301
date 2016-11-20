@@ -243,6 +243,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="Maintenance\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Home.aspx" />
     <Content Include="Images\Logo_TV_2015.png" />
@@ -257,6 +258,7 @@
     <Content Include="Images\Products\t8.jpg" />
     <Content Include="Images\Products\t9.jpg" />
     <Content Include="Images\tshirt.jpeg" />
+    <Content Include="Maintenance\Default.aspx" />
     <Content Include="Order.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -477,6 +479,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\CartItemList.cs" />
