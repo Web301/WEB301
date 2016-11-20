@@ -40,12 +40,12 @@ namespace Web301.Account {
         protected global::System.Web.UI.WebControls.HyperLink CreatePassword;
         
         /// <summary>
-        /// PhoneNumber control.
+        /// MaintainRoles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PhoneNumber;
+        protected global::System.Web.UI.WebControls.HyperLink MaintainRoles;
     }
 }
