@@ -39,8 +39,31 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-6">
-            <h2>Roles</h2>
+        <div class="col-sm-offset-1 col-sm-6">
+            <h2 class="form-group">Add Roles to a User</h2>
+            <div class="form-group">
+                <label class="control-label">Select a user:</label>
+                <asp:DropDownList ID="ddlUsers" runat="server" 
+                    SelectMethod="grdUsers_GetData" DataValueField="Id"
+                    DataTextField="UserName" CssClass="form-control" Width="20em">
+                </asp:DropDownList> 
+            </div>
+            <div class="form-group">
+                <label class="control-label">Select one or more roles:</label>
+                <asp:ListBox ID="lstRoles" runat="server" SelectionMode="Multiple" 
+                    SelectMethod="grdRoles_GetData" DataValueField="Id"
+                    DataTextField="Name" CssClass="form-control" Width="20em"></asp:ListBox>
+            </div>
+            <div class="form-group">
+                <asp:Button ID="btnAddRoles" runat="server" Text="Update User" 
+                CssClass="btn" OnClick="btnAddRoles_Click" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-6">
+            <h2>Manage Roles</h2>
             <asp:GridView ID="grdRoles" runat="server" DataKeyNames="Id" 
                 AutoGenerateColumns="false" SelectMethod="grdRoles_GetData"
                 CssClass="table table-bordered table-striped table-condensed" 
@@ -60,27 +83,7 @@
                         ShowDeleteButton="true" />
                 </Fields>
             </asp:DetailsView>
-        </div>
-        <div class="col-sm-6">
-            <h2>Add Roles to User</h2>
-            <div class="form-group">
-                <label class="control-label">Select a user:</label>
-                <asp:DropDownList ID="ddlUsers" runat="server" 
-                    SelectMethod="grdUsers_GetData" DataValueField="Id"
-                    DataTextField="UserName" CssClass="form-control">
-                </asp:DropDownList> 
-            </div>
-            <div class="form-group">
-                <label class="control-label">Add one or more roles:</label>
-                <asp:ListBox ID="lstRoles" runat="server" SelectionMode="Multiple" 
-                    SelectMethod="grdRoles_GetData" DataValueField="Id"
-                    DataTextField="Name" CssClass="form-control"></asp:ListBox>
-            </div>
-            <div class="form-group">
-                <asp:Button ID="btnAddRoles" runat="server" Text="Add Roles" 
-                CssClass="btn btn-default" OnClick="btnAddRoles_Click" />
-            </div>
-        </div>
+        </div>        
     </div>
 
 </asp:Content>

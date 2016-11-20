@@ -21,7 +21,7 @@ namespace Web301.Maintenance
         protected void Page_Load(object sender, EventArgs e)
         {
             userMgr = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            roleMgr = Context.GetOwinContext().Get<ApplicationRoleManager>();
+            roleMgr = Context.GetOwinContext().Get<ApplicationRoleManager>();       
         }
 
         // Select methods
