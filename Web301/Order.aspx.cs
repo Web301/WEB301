@@ -18,6 +18,13 @@ namespace Web301
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            string ProductSelected = ddlProducts.SelectedValue.ToString();
+            if (ProductSelected == "9")
+            {
+                FileUpload1.Visible = true;
+                btnUpload.Visible = true;
+                lblSelImage.Visible = true;
+            }
             string header = "Order";
             Master.HeaderText = header;
            

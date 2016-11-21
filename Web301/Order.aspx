@@ -70,10 +70,12 @@
                     </div>
                 </div>
                 <div>
-                    <p>Twitter message:<br /><asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>
-                    <p>Twitter Image:<br /> <asp:FileUpload runat="server" id="FileUpload1" /></p>
-                    <asp:Button ID="btnTwit" runat="server" Text="Tweet" OnClick="btnTwit_Click" /><hr />
-                    <asp:Label ID="lblResult" runat="server" EnableViewState="false" />
+                     <%--<p>Twitter message:<br /><asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>--%>
+                   
+                    <asp:Label ID="lblSelImage" runat="server" Text="Label" Visible="false">Select Image
+                    <asp:FileUpload runat="server" id="FileUpload1" Visible="false" /></asp:label>
+                    <asp:Button ID="btnUpload" runat="server" Text="Upload" Visible="false" OnClick="btnUpload_Click" /><hr />
+                    <%--<asp:Label ID="lblResult" runat="server" EnableViewState="true" />--%>
                 </div>
         </div><%-- end of row 2 --%>
     </div>

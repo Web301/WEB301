@@ -243,6 +243,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="Images\male model.jpg" />
+    <Content Include="Images\Products\ut-shirt-plain.jpeg" />
     <Content Include="Maintenance\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Home.aspx" />

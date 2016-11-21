@@ -130,13 +130,13 @@ namespace Web301 {
         protected global::System.Web.UI.WebControls.Button btnCheckOut;
         
         /// <summary>
-        /// txtMessage control.
+        /// lblSelImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMessage;
+        protected global::System.Web.UI.WebControls.Label lblSelImage;
         
         /// <summary>
         /// FileUpload1 control.
@@ -148,22 +148,13 @@ namespace Web301 {
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
         
         /// <summary>
-        /// btnTwit control.
+        /// btnUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTwit;
-        
-        /// <summary>
-        /// lblResult control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResult;
+        protected global::System.Web.UI.WebControls.Button btnUpload;
         
         /// <summary>
         /// Master property.

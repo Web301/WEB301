@@ -5,15 +5,24 @@
    <%-- <h2><%: Title %>.</h2>
     <h3>Your contact page.</h3>--%>
     <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
+         Rich Mans Lane<br />
+        Upper Rosses Point<br />
+        Sligo<br />
         <abbr title="Phone">P:</abbr>
-        425.555.0100
+        07191-12345
     </address>
 
     <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        <strong>Support:</strong>   <a href="mailto:t-printsRus@gmail.com">t-printsRus@gmail.com</a><br />
     </address>
+    <div>
+        <h3>Returns</h3>
+        On all pre printed tshirts we accept returns within 7 days of recipt. 
+        Unfortunately for custimised t-shirts we do not accept returns.
+    </div>
+    <div>
+        <h3>Deliveries</h3>
+        
+    </div>
 </div>
 </asp:Content>
