@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="Web301.About" %>
 <%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
- <div class="container">
-        <div class="row">
-            <div class="col-sm-8" >
-                <p class="col-sm-8">
-                    Quality: Unlike some other online print services all 
+ <main class="container">
+         <div class="row">
+               <div class="col-xs-12 col-md-8">
+                   <p>
+                       Quality: Unlike some other online print services all 
                     orders are checked by our expert team,
                     and an experienced account manager will be in touch should 
                     we spot any errors or if we think anything needs changing 
@@ -25,11 +25,12 @@
                     Whatever you need, whether it is a few embroidered polo 
                     shirts for a trade show or a thousand printed T-shirts for a
                     sales promotion we have a fast cost effective solution.
-                </p>
-                    </div>
-            <img class="col-sm-4 img-responsive" src="Images/male%20model.jpg" />
-           </div>
-    </div>
-  
-   
+                   </p>
+               </div>
+               <div class="col-xs-12 col-md-4">
+                   <img src="Images/male%20model.jpg" class="img-responsive">
+               </div>
+        </div>
+    </main>
+
 </asp:Content>
