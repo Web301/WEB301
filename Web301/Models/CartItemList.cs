@@ -5,6 +5,7 @@ using System.Web;
 
 public class CartItemList
 {
+    int cartTotalCount;
     private List<CartItem> cartItems;
 
     public CartItemList()
@@ -15,6 +16,11 @@ public class CartItemList
     public int Count
     {
         get { return cartItems.Count; }
+    }
+
+    public int CartCount
+    {
+        get { return cartTotalCount; }
     }
 
     public CartItem this[int index]
@@ -43,12 +49,15 @@ public class CartItemList
 
     public void AddItem(Product product, int quantity)
     {
+        cartTotalCount += quantity;
         CartItem c = new CartItem(product, quantity);
         cartItems.Add(c);
     }
 
     public void RemoveAt(int index)
     {
+        CartItem tempCI = cartItems.ElementAt(index);
+        cartTotalCount -= tempCI.Quantity;
         cartItems.RemoveAt(index);
     }
 

@@ -110,12 +110,7 @@ namespace Web301
         {
             // set cart count in PreRender event handler because count 
             // can get out of sync if set it in Load
-
-            //spanCount.InnerText = CartItemList.GetCart().Quantity.ToString();
-            spanCount.InnerText = CartItemList.GetCart().Count.ToString();
-
-            //Order o = new Order();
-            //spanCount.InnerText = o.CartCount();
+            spanCount.InnerText = CartItemList.GetCart().CartCount.ToString();
         }
 
     
