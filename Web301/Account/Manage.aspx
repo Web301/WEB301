@@ -22,6 +22,11 @@
                         <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Change]" Visible="false" ID="ChangePassword" runat="server" />
                         <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Create]" Visible="false" ID="CreatePassword" runat="server" />
                     </dd>
+                    <dt>Shop Administration:</dt>
+                    <dd>
+                    <asp:HyperLink NavigateUrl="~/Admin/Admin" Text="[Admin]" Visible="false" ID="Admin" runat="server"></asp:HyperLink>
+                        (Only users associated with the Shop Admin role)
+                    </dd>
                     <dt>Maintain Users/Roles:</dt>
                     <dd>
                     <asp:HyperLink NavigateUrl="~/Maintenance" Text="[Maintain]" Visible="false" ID="MaintainRoles" runat="server"></asp:HyperLink>

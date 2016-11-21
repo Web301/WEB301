@@ -55,12 +55,14 @@ namespace Web301.Account
                 {
                     ChangePassword.Visible = true;
                     MaintainRoles.Visible = true;
+                    Admin.Visible = true;
                 }
                 else
                 {
                     CreatePassword.Visible = true;
                     ChangePassword.Visible = false;
                     MaintainRoles.Visible = false;
+                    Admin.Visible = false;
                 }
 
                 // Render success message

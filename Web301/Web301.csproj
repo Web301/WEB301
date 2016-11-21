@@ -223,6 +223,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\Admin.aspx" />
     <Content Include="App_Data\aspnet-Web301-20161012034512.mdf" />
     <Content Include="App_Data\aspnet-Web301-20161012034512_log.ldf">
       <DependentUpon>aspnet-Web301-20161012034512.mdf</DependentUpon>
@@ -246,6 +247,7 @@
     <Content Include="Images\male model.jpg" />
     <Content Include="Images\Products\ut-shirt-plain.jpeg" />
     <Content Include="Maintenance\Web.config" />
+    <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Home.aspx" />
     <Content Include="Images\Logo_TV_2015.png" />
@@ -418,6 +420,13 @@
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
