@@ -5,48 +5,6 @@
 
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="MainContent" runat="server">
-    <script type="text/javascript">
-        //function addEvents()
-        //{
-        //    document.getElementById('btnUpload').addEventListener("click", draw, false);
-        //}
-        //function draw()
-        //{
-        //    var canvas = document.getElementById('canvas1');
-            
-        //    canvas.style.backgroundColor = "lightblue";
-        //    var context = canvas.getContext('2d');
-        //    var imageObj1 = new Image();
-        //    imageObj1.src = "~/Images/Products/ut-shirt-plain.jpeg"
-        //    imageObj1.onload = function () {
-        //        context.drawImage(imageObj1, x, y);
-        //    };
-        //    var imageObj2 = new Image();
-        //    imageObj2.src = "~/Images/Products/t1.jpg"
-        //    imageObj2.onload = function () {
-        //        context.drawImage(imageObj2, x, y);
-        //    };
-        //}
-        $(document).ready(function () {
-            $("#btnUpload").on("click", function () {
-                var canvas = document.getElementById("canvas1");
-                canvas.style.backgroundColor = "lightblue";
-                var context = canvas.getContext('2d');
-                var imageObj1 = new Image();
-                imageObj1.src = "~/Images/Products/ut-shirt-plain.jpeg"
-                imageObj1.onload = function () {
-                    context.drawImage(imageObj1, 0, 0, 328, 526);
-                };
-                var imageObj2 = new Image();
-                imageObj2.src = "~/Images/Products/t1.jpg"
-                imageObj2.onload = function () {
-               context.drawImage(imageObj2, 15, 85, 300, 300);
-                var img = canvas.toDataURL("image/png");
-                document.write('<img src="' + img + '" width="328" height="526"/>');
-                };
-            });
-        });
-    </script>
    
         <div class="container">
             <div class="row">

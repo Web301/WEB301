@@ -40,7 +40,7 @@
                 <%--Site Scripts--%>
             </Scripts>          
         </asp:ScriptManager>
-
+        <script src="Scripts/WebForms/myjs.js"></script>
         <script src="/Scripts/WebForms/owl.carousel.js"></script>
         <script src="/Scripts/WebForms/owl.carousel.min.js"></script>
 
