@@ -92,8 +92,10 @@ namespace Web301
             Response.Redirect(url);
         }
 
-        protected void btnUpload_Click(object sender, EventArgs e)
-        {
+        //protected void btnUpload_Click(object sender, EventArgs e)
+        //{
+            
+            
             //string key = "OVIhqFJyhxqBPMYuEe4PgH2Sw";
             //string secret = "3RoUbDb0yDw7Z7ohU2uIhq2g6RU0DeXjFBRWkC1s2Tr9baalWB";
             //string token = "232583683-Ji1xOzEWQkrC75cUlo2YCOYEUrpeLudw3hVV0i4v";
@@ -138,6 +140,6 @@ namespace Web301
 
             //}
 
-        }
+       // }
     }
 }
