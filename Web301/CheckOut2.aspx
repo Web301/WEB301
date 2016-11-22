@@ -3,6 +3,8 @@
 <asp:Content ContentPlaceHolderID="MainContent" runat="server"> 
     
 <div class="container">
+    <asp:Label ID="lblOrderTotal" runat="server" EnableViewState="False"
+                    CssClass="col-sm-12 control-label"></asp:Label>
     <h3>Shipping Method</h3>
     <div class="form-group">
         <label class="control-label col-sm-2">Choose one:</label>

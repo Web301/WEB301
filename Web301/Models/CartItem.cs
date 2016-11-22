@@ -31,4 +31,13 @@ public class CartItem
         );
         return displayString;
     }
+
+    public string DisplayCost()//*** ADDED BY PAUL
+    {
+        string subTotal = CartItemList.GetCart().GetCartCost.ToString("c");
+        string costString = string.Format("Your Order Total: {0}",
+            subTotal
+            );
+        return costString;
+    }
 }

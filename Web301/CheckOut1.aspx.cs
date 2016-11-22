@@ -10,6 +10,8 @@ namespace Web301
 {
     public partial class CheckOut1 : System.Web.UI.Page
     {
+        //string subTotal = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.AddBreadcrumbLink("/CheckOut1.aspx", "Home");
@@ -22,6 +24,8 @@ namespace Web301
                 string url = ConfigurationManager.AppSettings["SecurePath"] + "CheckOut1.aspx";
                 Response.Redirect(url);
             }
+            //subTotal = (string)Session["SubTotal"];
+            //lblOrderTotal.Text += subTotal;
         }
 
         protected void btnCheckOut_Click(object sender, EventArgs e)

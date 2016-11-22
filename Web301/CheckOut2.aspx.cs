@@ -22,6 +22,9 @@ namespace Web301
                 string url = ConfigurationManager.AppSettings["SecurePath"] + "CheckOut2.aspx";
                 Response.Redirect(url);
             }
+            
+            CartItem item = new CartItem();//*** ADDED BY PAUL
+            lblOrderTotal.Text = item.DisplayCost();//*** ADDED BY PAUL
         }
 
         protected void btnAccept_Click(object sender, EventArgs e)

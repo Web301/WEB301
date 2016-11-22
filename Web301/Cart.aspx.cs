@@ -11,7 +11,7 @@ namespace Web301
     public partial class Cart : System.Web.UI.Page
     {
         private CartItemList cart;
-        private string subTotal;
+        //private string subTotal;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,10 +23,11 @@ namespace Web301
 
             cart = CartItemList.GetCart();
             if (!IsPostBack)
+            {
                 this.DisplayCart();
-
-            subTotal = CartItemList.GetCart().GetCartCost.ToString("c");//*** ADDED BY PAUL
-            lblSubTotal.Text += subTotal;//*** ADDED BY PAUL
+            } 
+            CartItem item = new CartItem();//*** ADDED BY PAUL
+            lblSubTotal.Text = item.DisplayCost();//*** ADDED BY PAUL
         }
 
         private void DisplayCart()
@@ -42,12 +43,15 @@ namespace Web301
 
         protected void btnRemove_Click(object sender, EventArgs e)
         {
+            
             if (cart.Count > 0)
             {
                 if (lstCart.SelectedIndex > -1)
                 {
                     cart.RemoveAt(lstCart.SelectedIndex);
                     this.DisplayCart();
+                    CartItem item = new CartItem();//*** ADDED BY PAUL
+                    lblSubTotal.Text = item.DisplayCost();//*** ADDED BY PAUL
                 }
                 else
                 {
@@ -62,11 +66,13 @@ namespace Web301
             {
                 cart.Clear();
                 lstCart.Items.Clear();
+                CartItem item = new CartItem();//*** ADDED BY PAUL
+                lblSubTotal.Text = item.DisplayCost();//*** ADDED BY PAUL
             }
         }
 
         protected void btnCheckOut_Click(object sender, EventArgs e)
-        {
+        {            
             string url = ConfigurationManager.AppSettings["SecurePath"] + "CheckOut1.aspx";
             Response.Redirect(url);
         }

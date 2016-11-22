@@ -72,5 +72,7 @@ public class CartItemList
     public void Clear()
     {
         cartItems.Clear();
+        cartTotalCount = 0;
+        cartCost = 0;
     }
 }

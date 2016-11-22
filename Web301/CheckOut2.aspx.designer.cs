@@ -13,6 +13,15 @@ namespace Web301 {
     public partial class CheckOut2 {
         
         /// <summary>
+        /// lblOrderTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOrderTotal;
+        
+        /// <summary>
         /// rblShipping control.
         /// </summary>
         /// <remarks>
