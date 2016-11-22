@@ -11,6 +11,7 @@ namespace Web301
     public partial class Cart : System.Web.UI.Page
     {
         private CartItemList cart;
+        private string subTotal;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,6 +24,9 @@ namespace Web301
             cart = CartItemList.GetCart();
             if (!IsPostBack)
                 this.DisplayCart();
+
+            subTotal = CartItemList.GetCart().GetCartCost.ToString("c");//*** ADDED BY PAUL
+            lblSubTotal.Text += subTotal;//*** ADDED BY PAUL
         }
 
         private void DisplayCart()

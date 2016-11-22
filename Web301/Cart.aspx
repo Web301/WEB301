@@ -6,9 +6,12 @@
         <div class="col-sm-6"><%-- cart display column --%>
             <div class="form-group">
                 <div class="col-sm-12"><asp:ListBox ID="lstCart" runat="server" CssClass="form-control" Width="30em"></asp:ListBox></div>
+                <asp:Label ID="lblSubTotal" runat="server" EnableViewState="False"
+                    CssClass="col-sm-12">SubTotal: </asp:Label>
             </div>
+            
         </div>
-        
+        <br />
     </div><%-- end of row 1 --%>
     <div class="row"><%-- row 2 --%>        
         <div class="col-sm-12">

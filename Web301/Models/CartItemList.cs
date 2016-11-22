@@ -5,7 +5,8 @@ using System.Web;
 
 public class CartItemList
 {
-    int cartTotalCount;
+    int cartTotalCount;//*** ADDED BY PAUL
+    decimal cartCost;//*** ADDED BY PAUL
     private List<CartItem> cartItems;
 
     public CartItemList()
@@ -18,9 +19,14 @@ public class CartItemList
         get { return cartItems.Count; }
     }
 
-    public int CartCount
+    public int CartCount//*** ADDED BY PAUL
     {
         get { return cartTotalCount; }
+    }
+
+    public decimal GetCartCost//*** ADDED BY PAUL
+    {
+        get { return cartCost; }
     }
 
     public CartItem this[int index]
@@ -49,15 +55,17 @@ public class CartItemList
 
     public void AddItem(Product product, int quantity)
     {
-        cartTotalCount += quantity;
+        cartCost += (product.UnitPrice * Convert.ToDecimal(quantity));//*** ADDED BY PAUL
+        cartTotalCount += quantity;//*** ADDED BY PAUL
         CartItem c = new CartItem(product, quantity);
         cartItems.Add(c);
     }
 
     public void RemoveAt(int index)
     {
-        CartItem tempCI = cartItems.ElementAt(index);
-        cartTotalCount -= tempCI.Quantity;
+        CartItem tempCI = cartItems.ElementAt(index);//*** ADDED BY PAUL
+        cartTotalCount -= tempCI.Quantity;//*** ADDED BY PAUL
+        cartCost -= (tempCI.Product.UnitPrice * tempCI.Quantity);//*** ADDED BY PAUL
         cartItems.RemoveAt(index);
     }
 
