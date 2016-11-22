@@ -5,8 +5,8 @@
 
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="MainContent" runat="server">
-   
-        <div class="container">
+  
+        <div class="container" onload="EventListener()">
             <div class="row">
                 <%-- row 1 --%>
                 <div class="col-sm-8">
@@ -85,12 +85,16 @@
 
                     <asp:Label ID="lblSelImage" runat="server" Text="Label" Visible="false">Select Image
                     <asp:FileUpload runat="server" ID="FileUpload1" Visible="false" /></asp:Label>
-                    <asp:Button ID="btnUpload" runat="server" Text="Upload" Visible="false" /><hr />
+                    <asp:Button ID="btnUpload" runat="server" Text="Upload" Visible="false" OnClientClick="return false;" /><hr />
                     <canvas id="canvas1" height="200" width="200"></canvas>
                     <%--<asp:Label ID="lblResult" runat="server" EnableViewState="true" />--%>
                 </div>
             </div>
             <%-- end of row 2 --%>
         </div>
-
+   <%-- <script>
+document.getElementById("#btnUpload").addEventListener("click", function(event){
+    event.preventDefault()
+});
+</script>--%>
 </asp:Content>
