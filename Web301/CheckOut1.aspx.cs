@@ -34,7 +34,7 @@ namespace Web301
                 customer.EmailAddress = txtEmail.Text;
                 customer.Address = txtAddress.Text;
                 customer.City = txtCity.Text;
-                customer.State = txtState.Text;
+                customer.State = ddlCounties.Text;
                 customer.Zip = txtZip.Text;
                 customer.Phone = txtPhone.Text;
                 Session["Customer"] = customer;
