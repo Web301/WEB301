@@ -5,4 +5,5 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>HELLO WORLD!</h1>
+    <h2>ADMIN STUFF GOES HERE</h2>
 </asp:Content>
