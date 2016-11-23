@@ -17,9 +17,10 @@ $(document).ready(function () {
                 var imageObj2 = new Image();
                 imageObj2.src = "/Images/Products/t1.jpg";
                 imageObj2.onload = function () {
-               context.drawImage(imageObj2, 15, 85, 100, 100);
-                var img = canvas.toDataURL("image/png");
-                document.write('<img src="' + img + '" width="200" height="200"/>');
+               context.drawImage(imageObj2, 50, 60, 100, 100);
+               var img = canvas.toDataURL("image/png");
+               $("#canvas1").html('<img src="' + img + '" width="200" height="200"/>')
+                //document.write();
                 };
             });
 });
