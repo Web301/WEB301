@@ -32,7 +32,7 @@ namespace Web301
             if (IsValid)
             {
                 var customer = (Customer)Session["Customer"];
-                customer.ShippingMethod = rblShipping.SelectedValue;
+                //customer.ShippingMethod = rblShipping.SelectedValue;
                 customer.CardType = ddlCardType.SelectedValue;
                 customer.CardNumber = txtCardNumber.Text;
                 customer.ExpirationDate = txtExpiration.Text;

@@ -15,6 +15,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link type="text/css" rel="stylesheet" href="Content/owl.carousel.css" />
     <link type="text/css" rel="stylesheet" href="Content/owl.theme.css" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server" class="form-horizontal">
@@ -77,6 +78,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a runat="server" href="~/Account/Register">Register</a></li>
                             <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                            <li><a runat="server" href="#"></a></li>
                         </ul>
                     </AnonymousTemplate>
                     <LoggedInTemplate>
@@ -84,13 +86,14 @@
                             <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
                             <li>
                                 <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                            </li>
+                            </li>                            
+                            <li><a runat="server" href="#"></a></li>
                         </ul>
                     </LoggedInTemplate>
                 </asp:LoginView>
             
                 </div>
-            </div>
+            
         </nav>
         
         <div class="container">

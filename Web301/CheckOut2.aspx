@@ -3,9 +3,13 @@
 <asp:Content ContentPlaceHolderID="MainContent" runat="server"> 
     
 <div class="container">
-    <asp:Label ID="lblOrderTotal" runat="server" EnableViewState="False"
-                    CssClass="col-sm-12 control-label"></asp:Label>
-    <h3>Shipping Method</h3>
+    <div class="form-group">
+            <div class="col-sm-6">
+                <asp:Label ID="lblOrderTotal" runat="server" EnableViewState="False"
+                    CssClass="badge col-sm-12" Font-Size="X-Large" ></asp:Label>               
+            </div>
+    </div>
+    <%--<h3>Shipping Method</h3>
     <div class="form-group">
         <label class="control-label col-sm-2">Choose one:</label>
         <div class="col-sm-10">
@@ -15,7 +19,7 @@
                 <asp:ListItem>Overnight Express </asp:ListItem>
             </asp:RadioButtonList>
         </div>
-    </div>
+    </div>--%>
 
     <h3>Payment Information</h3>
     <div class="form-group">

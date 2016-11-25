@@ -9,7 +9,7 @@
                     <div class="col-sm-4">
                         <div class="thumbnail">
                             <img src='/Images/Products/<%# Eval("ImageFile") %>'
-                                alt='<%# Eval("ProductName") %>' />
+                                alt='<%# Eval("ProductName") %>' style="max-height: 300px" />
                             <div class="caption">
                                 <h3><%# Eval("ProductShortDescription") %></h3>
                                 <p>
