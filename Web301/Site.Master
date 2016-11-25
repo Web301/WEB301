@@ -117,44 +117,45 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <div class="container">
-                <div class="jumbotron">
-                    <footer>
-                        <div class="row">                           
-                            <div class="col-md-3">
-                                <div class="footerFormat">
-                                    <h4>Information</h4>
-                                    <a runat="server" href="~/">About Us</a><br>
-                                    <a runat="server" href="~/">Products</a><br>
-                                    <a runat="server" href="~/">Contact US</a><br>
-                                </div>
+            
+        </div>
+        <div class="container">
+            <div class="jumbotron">
+                <footer>
+                    <div class="row">                           
+                        <div class="col-md-3">
+                            <div class="footerFormat">
+                                <h4>Information</h4>
+                                <a runat="server" href="~/">About Us</a><br>
+                                <a runat="server" href="~/">Products</a><br>
+                                <a runat="server" href="~/">Contact US</a><br>
                             </div>
-                            <div class="col-md-3">
-                                <div class="footerFormat" ">
-                                    <h4>Help</h4>
-                                    <a runat="server" href="~/">Returns</a><br>
-                                    <a runat="server" href="~/">Deliveries</a><br>
-                                    <a runat="server" href="~/">FAQ</a><br>
-                                </div>
-                            </div>
-                             <div class="col-md-3">
-                                <div class="footerFormat">
-                                    <%--<h4>Our Offers</h4>
-                                    <a runat="server" href="~/">2 for 30</a><br>
-                                    <a runat="server" href="~/">2 for 40</a><br>
-                                    <a runat="server" href="~/">3 for 30</a><br>
-                                    <a runat="server" href="~/">3 for 40</a><br>--%>
-                                </div>
-                            </div>
-                            <div class="col-md-3" style="background-color:darkgray">
-                                <h3>Contact Us</h3>
-                               <h4>07191-12345</h4>
-                                <p><a href="Contact.aspx"class="btn btn-primary btn-md">Contact Us Now</a></p>
-                            </div>                                
                         </div>
-                        <p style="text-align: left; font-size: smaller; padding-top: 2em; font-weight: lighter">&copy; <%: DateTime.Now.Year %> - Claire&Paul</p>
-                    </footer>
-                </div>
+                        <div class="col-md-3">
+                            <div class="footerFormat" ">
+                                <h4>Help</h4>
+                                <a runat="server" href="~/">Returns</a><br>
+                                <a runat="server" href="~/">Deliveries</a><br>
+                                <a runat="server" href="~/">FAQ</a><br>
+                            </div>
+                        </div>
+                            <div class="col-md-3">
+                            <div class="footerFormat">
+                                <%--<h4>Our Offers</h4>
+                                <a runat="server" href="~/">2 for 30</a><br>
+                                <a runat="server" href="~/">2 for 40</a><br>
+                                <a runat="server" href="~/">3 for 30</a><br>
+                                <a runat="server" href="~/">3 for 40</a><br>--%>
+                            </div>
+                        </div>
+                        <div class="col-md-3" style="background-color:darkgray">
+                            <h3>Contact Us</h3>
+                            <h4>07191-12345</h4>
+                            <p><a href="Contact.aspx"class="btn btn-primary btn-md">Contact Us Now</a></p>
+                        </div>                                
+                    </div>
+                    <p style="text-align: left; font-size: smaller; padding-top: 2em; font-weight: lighter">&copy; <%: DateTime.Now.Year %> - Claire&Paul</p>
+                </footer>
             </div>
         </div>
     </form>
