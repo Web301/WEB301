@@ -3,9 +3,9 @@ $(document).ready(function () {
     $("#btnUpload").on("click", function (event) {
         event.preventDefault()
     });
-    window.alert("sometext");
+    window.alert("window loaded");
     $("#MainContent_btnUpload").on("click", function () {
-        window.alert("sometext");
+        window.alert("btn upload");
                 var canvas = document.getElementById("canvas1");
                 canvas.style.backgroundColor = "lightblue";
                 var context = canvas.getContext('2d');

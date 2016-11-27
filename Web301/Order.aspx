@@ -13,7 +13,7 @@
                         <div class="col-sm-6">
                             <asp:DropDownList ID="ddlProducts" runat="server" AutoPostBack="True"
                                 DataSourceID="SqlDataSource1" DataTextField="ProductName"
-                                DataValueField="ProductID" CssClass="form-control">
+                                DataValueField="ProductID" CssClass="form-control" OnSelectedIndexChanged="ddlProducts_SelectedIndexChanged">
                             </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server"
                                 ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
@@ -81,7 +81,7 @@
                     <%--<p>Twitter message:<br /><asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>--%>
 
                     <asp:Label ID="lblSelImage" runat="server" Text="Label" Visible="false">Select Image
-                    <asp:FileUpload runat="server" ID="FileUpload1" Visible="false" /></asp:Label>
+                    <asp:FileUpload runat="server" ID="FileUpload1" Visible="false" OnClick="FileUpload1_Load" /></asp:Label>
                     <asp:Button ID="btnUpload" runat="server" Text="Upload" Visible="false" OnClientClick="return false;" /><hr />
                     <canvas id="canvas1" height="200" width="200"></canvas>
                     <%--<asp:Label ID="lblResult" runat="server" EnableViewState="true" />--%>

@@ -18,13 +18,7 @@ namespace Web301
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string ProductSelected = ddlProducts.SelectedValue.ToString();
-            if (ProductSelected == "9")
-            {
-                FileUpload1.Visible = true;
-                btnUpload.Visible = true;
-                lblSelImage.Visible = true;
-            }
+          
             string header = "Order";
             Master.HeaderText = header;
            
@@ -42,6 +36,7 @@ namespace Web301
             lblLongDescription.Text = selectedProduct.LongDescription;
             lblUnitPrice.Text = selectedProduct.UnitPrice.ToString("c") + " each";
             imgProduct.ImageUrl = "Images/Products/" + selectedProduct.ImageFile;
+
         }
 
         private Product GetSelectedProduct()
@@ -92,54 +87,78 @@ namespace Web301
             Response.Redirect(url);
         }
 
+        protected void ddlProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            string ProductSelected = ddlProducts.SelectedValue.ToString();
+            if (ProductSelected == "9")
+            {
+                FileUpload1.Visible = true;
+                btnUpload.Visible = true;
+                lblSelImage.Visible = true;
+            }
+        }
+
+        protected void FileUpload1_Load(object sender, EventArgs e)
+        {
+
+            string imagePath = string.Empty;
+            if (FileUpload1.HasFile)
+            {
+                string fileName = System.IO.Path.GetFileName(FileUpload1.FileName);
+                imagePath = Server.MapPath("~/Images/" + fileName);
+                FileUpload1.SaveAs(imagePath);
+            }
+        }
+
         //protected void btnUpload_Click(object sender, EventArgs e)
         //{
-            
-            
-            //string key = "OVIhqFJyhxqBPMYuEe4PgH2Sw";
-            //string secret = "3RoUbDb0yDw7Z7ohU2uIhq2g6RU0DeXjFBRWkC1s2Tr9baalWB";
-            //string token = "232583683-Ji1xOzEWQkrC75cUlo2YCOYEUrpeLudw3hVV0i4v";
-            //string tokenSecret = "a2CtMQ0D7WmeWPDLVhSu5Gr1bT8hGuBH0zwHJ5XlqEz9Y";
 
-            //string message = txtMessage.Text.Trim();
-            // check if file is there, upload it
-            //string imagePath = string.Empty;
-            //if (FileUpload1.HasFile)
-            //{
-            //    string fileName = System.IO.Path.GetFileName(FileUpload1.FileName);
-            //    imagePath = Server.MapPath("~/Images/" + fileName);
-            //    FileUpload1.SaveAs(imagePath);
-            //}
 
-            //var service = new TweetSharp.TwitterService(key, secret);
-            //service.AuthenticateWith(token, tokenSecret);
+        //string key = "OVIhqFJyhxqBPMYuEe4PgH2Sw";
+        //string secret = "3RoUbDb0yDw7Z7ohU2uIhq2g6RU0DeXjFBRWkC1s2Tr9baalWB";
+        //string token = "232583683-Ji1xOzEWQkrC75cUlo2YCOYEUrpeLudw3hVV0i4v";
+        //string tokenSecret = "a2CtMQ0D7WmeWPDLVhSu5Gr1bT8hGuBH0zwHJ5XlqEz9Y";
 
-            //// Tweet wtih image
-            //if (imagePath.Length > 0)
-            //{
-            //    using (var stream = new FileStream(imagePath, FileMode.Open))
-            //    {
-            //        var result = service.SendTweetWithMedia(new SendTweetWithMediaOptions
-            //        {
-            //            Status = message,
-            //            Images = new Dictionary<string, Stream> { { "john", stream } }
-            //        });
-            //        lblResult.Text = result.Text.ToString();
-            //    }
-            //}
-            //else // just message
-            //{
-            //    var result = service.SendTweet(new SendTweetOptions
-            //    {
-            //        Status = message
-            //    });
-            //    if (result != null)
-            //    {
-            //        lblResult.Text = result.Text.ToString();
-            //    }
+        //string message = txtMessage.Text.Trim();
+        // check if file is there, upload it
+        //string imagePath = string.Empty;
+        //if (FileUpload1.HasFile)
+        //{
+        //    string fileName = System.IO.Path.GetFileName(FileUpload1.FileName);
+        //    imagePath = Server.MapPath("~/Images/" + fileName);
+        //    FileUpload1.SaveAs(imagePath);
+        //}
 
-            //}
+        //var service = new TweetSharp.TwitterService(key, secret);
+        //service.AuthenticateWith(token, tokenSecret);
 
-       // }
+        //// Tweet wtih image
+        //if (imagePath.Length > 0)
+        //{
+        //    using (var stream = new FileStream(imagePath, FileMode.Open))
+        //    {
+        //        var result = service.SendTweetWithMedia(new SendTweetWithMediaOptions
+        //        {
+        //            Status = message,
+        //            Images = new Dictionary<string, Stream> { { "john", stream } }
+        //        });
+        //        lblResult.Text = result.Text.ToString();
+        //    }
+        //}
+        //else // just message
+        //{
+        //    var result = service.SendTweet(new SendTweetOptions
+        //    {
+        //        Status = message
+        //    });
+        //    if (result != null)
+        //    {
+        //        lblResult.Text = result.Text.ToString();
+        //    }
+
+        //}
+
+        // }
     }
 }
