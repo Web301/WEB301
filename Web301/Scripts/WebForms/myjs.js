@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#btnUpload").on("click", function (event) {
         event.preventDefault()
     });
-    //window.alert("sometext");
+    window.alert("sometext");
     $("#MainContent_btnUpload").on("click", function () {
         window.alert("sometext");
                 var canvas = document.getElementById("canvas1");

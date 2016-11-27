@@ -1,12 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Web301.Order" %>
 
 <%@ MasterType VirtualPath="~/Site.Master" %>
-
-
-
 <asp:Content ID="mainContent" ContentPlaceHolderID="MainContent" runat="server">
-  
-        <div class="container" onload="EventListener()">
+    <script src="Scripts/WebForms/myjs.js"></script>
+        <div class="container">
             <div class="row">
                 <%-- row 1 --%>
                 <div class="col-sm-8">
