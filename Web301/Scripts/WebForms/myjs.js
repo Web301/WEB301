@@ -19,8 +19,6 @@ $(document).ready(function () {
         context.drawImage(imageObj2, 50, 60, 100, 100);
         var img = canvas.toDataURL("image/png");
         $("#canvas1").html('<img src="' + img + '" width="200" height="200"/>')
-        img = new Image();
-            img.
         };
     });
 });
@@ -34,9 +32,11 @@ function processFile()
 {
     var file = document.getElementById('file').files[0];
     writeFileToStorage(file)
+    window.alert("process file")
 }
 function writeFileToStorage(file)
 {
+    window.alert("write to storage")
     var reader = new FileReader();
     reader.onload = function () {
         var img = new Image();
@@ -51,6 +51,7 @@ function writeFileToStorage(file)
     reader.readAsDataURL(file);
 }
 function retrieveFile() {
+    window.alert("retrieve file")
     var file = localStorage.getItem("myFile");
     if (file !== null) {
         var rImg = new Image();
