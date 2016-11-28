@@ -84,7 +84,7 @@
                    <%-- <asp:Label ID="lblSelImage" runat="server" Text="Label" Visible="false">Select Image
                     <asp:FileUpload runat="server" ID="FileUpload1" Visible="false" OnClick="FileUpload1_Load" /></asp:Label>--%>
                     <input type="file" accept="image/*" id="file"/>
-                    <asp:Button ID="btnUpload" runat="server" Text="Upload"  OnClientClick="return false;" /><hr />
+                    <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick="btnUpload_Click"  OnClientClick="return false;" /><hr />
                     <canvas id="canvas1" height="200" width="200"></canvas>
                     <%--<asp:Label ID="lblResult" runat="server" EnableViewState="true" />--%>
                 </div>

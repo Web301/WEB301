@@ -5,7 +5,6 @@ $(document).ready(function () {
     });
 
     $("#MainContent_btnUpload").on("click", function () {
-        window.alert("btn upload");
         var canvas = document.getElementById("canvas1");
         canvas.style.backgroundColor = "lightblue";
         var context = canvas.getContext('2d');
@@ -17,10 +16,11 @@ $(document).ready(function () {
         var imageObj2 = new Image();
         imageObj2.src = localStorage.getItem("myFile");
         imageObj2.onload = function () {
-            context.drawImage(imageObj2, 50, 60, 100, 100);
-            var img = canvas.toDataURL("image/png");
-            $("#canvas1").html('<img src="' + img + '" width="200" height="200"/>')
-            //document.write();
+        context.drawImage(imageObj2, 50, 60, 100, 100);
+        var img = canvas.toDataURL("image/png");
+        $("#canvas1").html('<img src="' + img + '" width="200" height="200"/>')
+        img = new Image();
+            img.
         };
     });
 });
