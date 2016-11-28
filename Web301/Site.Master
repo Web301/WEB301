@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="Content/owl.theme.css" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
 </head>
-<body>
+<body onload="addEvents()">
     <form runat="server" class="form-horizontal">
         <asp:ScriptManager runat="server">
             <Scripts>

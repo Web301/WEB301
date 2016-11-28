@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Web301.Order" %>
 
 <%@ MasterType VirtualPath="~/Site.Master" %>
-<asp:Content ID="mainContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="mainContent" ContentPlaceHolderID="MainContent" runat="server" >
+
     <script src="Scripts/WebForms/myjs.js"></script>
-        <div class="container">
+        <div class="container" >
             <div class="row">
                 <%-- row 1 --%>
                 <div class="col-sm-8">
@@ -80,9 +81,10 @@
                 <div>
                     <%--<p>Twitter message:<br /><asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>--%>
 
-                    <asp:Label ID="lblSelImage" runat="server" Text="Label" Visible="false">Select Image
-                    <asp:FileUpload runat="server" ID="FileUpload1" Visible="false" OnClick="FileUpload1_Load" /></asp:Label>
-                    <asp:Button ID="btnUpload" runat="server" Text="Upload" Visible="false" OnClientClick="return false;" /><hr />
+                   <%-- <asp:Label ID="lblSelImage" runat="server" Text="Label" Visible="false">Select Image
+                    <asp:FileUpload runat="server" ID="FileUpload1" Visible="false" OnClick="FileUpload1_Load" /></asp:Label>--%>
+                    <input type="file" accept="image/*" id="file"/>
+                    <asp:Button ID="btnUpload" runat="server" Text="Upload"  OnClientClick="return false;" /><hr />
                     <canvas id="canvas1" height="200" width="200"></canvas>
                     <%--<asp:Label ID="lblResult" runat="server" EnableViewState="true" />--%>
                 </div>
@@ -94,4 +96,7 @@ document.getElementById("#btnUpload").addEventListener("click", function(event){
     event.preventDefault()
 });
 </script>--%>
+    <script>
+ 
+    </script>
 </asp:Content>

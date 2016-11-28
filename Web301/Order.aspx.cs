@@ -93,23 +93,23 @@ namespace Web301
             string ProductSelected = ddlProducts.SelectedValue.ToString();
             if (ProductSelected == "9")
             {
-                FileUpload1.Visible = true;
-                btnUpload.Visible = true;
-                lblSelImage.Visible = true;
+                //FileUpload1.Visible = true;
+                //btnUpload.Visible = true;
+                //lblSelImage.Visible = true;
             }
         }
 
-        protected void FileUpload1_Load(object sender, EventArgs e)
-        {
+        //protected void FileUpload1_Load(object sender, EventArgs e)
+        //{
 
-            string imagePath = string.Empty;
-            if (FileUpload1.HasFile)
-            {
-                string fileName = System.IO.Path.GetFileName(FileUpload1.FileName);
-                imagePath = Server.MapPath("~/Images/" + fileName);
-                FileUpload1.SaveAs(imagePath);
-            }
-        }
+        //    string imagePath = string.Empty;
+        //    if (FileUpload1.HasFile)
+        //    {
+        //        string fileName = System.IO.Path.GetFileName(FileUpload1.FileName);
+        //        imagePath = Server.MapPath("~/Images/" + fileName);
+        //        FileUpload1.SaveAs(imagePath);
+        //    }
+        //}
 
         //protected void btnUpload_Click(object sender, EventArgs e)
         //{
