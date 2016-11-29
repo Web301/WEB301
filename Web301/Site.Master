@@ -57,7 +57,7 @@
             <div class="navbar-collapse collapse">
             <ul id="Ul1" runat="server" class="nav navbar-nav" >
 
-                <li runat="server"> <asp:HyperLink NavigateUrl="~/Order.aspx" runat="server">
+                <li runat="server"> <asp:HyperLink NavigateUrl="~/Default.aspx" runat="server">
                         <span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
                 <li runat="server"><asp:HyperLink NavigateUrl="~/Products.aspx" runat="server">
                         <span class="glyphicon glyphicon-tasks"></span>Products</asp:HyperLink></li>                    
