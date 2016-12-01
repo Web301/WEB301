@@ -1,8 +1,8 @@
 // JavaScript Document
 $(document).ready(function () {
-    $("#btnUpload").on("click", function (event) {
-        event.preventDefault()
-    });
+    //$("#btnUpload").on("click", function (event) {
+    //    event.preventDefault()
+    //});
 
     $("#MainContent_btnUpload").on("click", function () {
         var canvas = document.getElementById("canvas1");
@@ -19,6 +19,7 @@ $(document).ready(function () {
         context.drawImage(imageObj2, 50, 60, 100, 100);
         var img = canvas.toDataURL("image/png");
         $("#canvas1").html('<img src="' + img + '" width="200" height="200"/>')
+            
         };
     });
 });
