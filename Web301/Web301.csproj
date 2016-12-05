@@ -464,6 +464,7 @@
     <Compile Include="Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CartEventListener.cs" />
     <Compile Include="CheckOut1.aspx.cs">
       <DependentUpon>CheckOut1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

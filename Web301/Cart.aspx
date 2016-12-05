@@ -13,6 +13,13 @@
                         CssClass="badge col-sm-12" Font-Size="X-Large" ></asp:Label>               
                 </div>
             </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+            <asp:Label ID="lblFreeShip" runat="server" EnableViewState="False" 
+                        CssClass="col-sm-12" ForeColor="Red" 
+                Font-Size="X-Large" Text=""></asp:Label>
+                </div>
+            </div>
         </div>
         <br />
     </div><%-- end of row 1 --%>

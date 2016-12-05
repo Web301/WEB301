@@ -10,8 +10,11 @@ namespace Web301
 {
     public partial class Cart : System.Web.UI.Page
     {
+        static string Message = "Congratulations!! You Have Qualified for Free Shipping.";//*** ADDED BY PAUL
+        static decimal ThresholdValue = 50;//*** ADDED BY PAUL
+        static CartEventListener cartPrice = new CartEventListener(Message, ThresholdValue);//*** ADDED BY PAUL
+
         private CartItemList cart;
-        //private string subTotal;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,6 +31,20 @@ namespace Web301
             } 
             CartItem item = new CartItem();//*** ADDED BY PAUL
             lblSubTotal.Text = item.DisplayCost();//*** ADDED BY PAUL
+
+            decimal cartTotal = cart.GetCartCost;
+            //decimal itemTotal = (cart.Count * cart.GetCartCost);
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            // Assign the delegate to the composed delegate
+            // The Show message method is called when the TotalPrice exceeds a Threshold vlaue, in this case 150.
+            cartPrice.Exceeded += new CartEventListener.ThresholdExceededHandler(ShowMessage);
+
+            cartPrice.AddPriceToTotal(cartTotal);
+        }
+
+        private void ShowMessage(string message)
+        {
+            lblFreeShip.Text = message;
         }
 
         private void DisplayCart()
@@ -52,6 +69,12 @@ namespace Web301
                     this.DisplayCart();
                     CartItem item = new CartItem();//*** ADDED BY PAUL
                     lblSubTotal.Text = item.DisplayCost();//*** ADDED BY PAUL
+
+                    decimal cartTotal = cart.GetCartCost;
+                    if (cartTotal <= 50)
+                    {
+                        lblFreeShip.Text = "";
+                    }
                 }
                 else
                 {
@@ -68,6 +91,7 @@ namespace Web301
                 lstCart.Items.Clear();
                 CartItem item = new CartItem();//*** ADDED BY PAUL
                 lblSubTotal.Text = item.DisplayCost();//*** ADDED BY PAUL
+                lblFreeShip.Text = "";
             }
         }
 

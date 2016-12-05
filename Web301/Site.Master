@@ -102,6 +102,7 @@
                     <asp:Image ID="Image5" runat="server" src="/Images/Logo_TV_2015.png" Width="150" Height="100" />
                     <span id="WebsiteName">t-Print R Us</span>
                     <p id="slogan">Personalise any t-shirt with a picture of your choice</p>
+                    <p id="freeship">Free Shipping on all Orders Over €50!!</p>
                 </div>
             </div>
             <div>
