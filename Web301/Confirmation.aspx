@@ -18,11 +18,11 @@
                     
             <asp:FileUpload runat="server" ID="FileUpload1" runat="server" />
             <p>Twitter message:<br />
-                <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>
-            <asp:Label ID="lblResult" runat="server" EnableViewState="true" />
-     
+                <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>                 
             <asp:Button ID="btnUpload2" runat="server" Text="Tweet your Order!" 
                     CssClass="btn" OnClick="btnUpload2_Click" />
+            </br>
+            <asp:Label ID="lblResult" runat="server" EnableViewState="true" />
         </div>
     </div>
 

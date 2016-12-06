@@ -60,7 +60,8 @@ namespace Web301
                     Status = message,
                     Images = new Dictionary<string, Stream> { { "john", stream } }
                 });
-                lblResult.Text = result.Text.ToString();
+                    lblResult.Text = "Congratulations you have tweeted your order";
+                        //result.Text.ToString();
             }
         }
         else // just message
