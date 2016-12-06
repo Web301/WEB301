@@ -3,9 +3,9 @@ $(document).ready(function () {
     $('btnDownload').on("click", function (event) {
         event.preventDefault()
     });
-    //$('#MainContent_btnUpload').on("click", function (event) {
-    //    event.preventDefault()
-    //});
+    $('#MainContent_btnUpload').on("click", function (event) {
+        event.preventDefault()
+    });
 
     $("#MainContent_btnUpload").on("click", function () {
         var canvas = document.getElementById("canvas1");
@@ -30,12 +30,16 @@ $(document).ready(function () {
             button.href = dataURL;
         });
     });
+    $("#file").change(function () {
+        var file = document.getElementById("file").files[0];
+        writeFileToStorage(file)
+    });
 });
 
 function addEvents() {
-    document.getElementById('file').addEventListener("change", processFile, false);
-    //document.getElementById('fileToRetrieve').addEventListener("click", retrieveFile, false);
-   // document.getElementById('clear').addEventListener("click", clearStorage, false);
+    document.getElementById("file").addEventListener("change", processFile, false);
+    document.getElementById('fileToRetrieve').addEventListener("click", retrieveFile, false);
+    document.getElementById('clear').addEventListener("click", clearStorage, false);
 }
 function processFile()
 {
