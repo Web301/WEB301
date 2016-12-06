@@ -1,6 +1,9 @@
 // JavaScript Document
 $(document).ready(function () {
-    //$("#btnUpload").on("click", function (event) {
+    $('btnDownload').on("click", function (event) {
+        event.preventDefault()
+    });
+    //$('#MainContent_btnUpload').on("click", function (event) {
     //    event.preventDefault()
     //});
 
@@ -19,25 +22,28 @@ $(document).ready(function () {
         context.drawImage(imageObj2, 50, 60, 100, 100);
         var img = canvas.toDataURL("image/png");
         $("#canvas1").html('<img src="' + img + '" width="200" height="200"/>')
-            
+           
         };
+        var button = document.getElementById('btnDownload');
+        button.addEventListener('click', function (e) {
+            var dataURL = canvas.toDataURL('image/png');
+            button.href = dataURL;
+        });
     });
 });
 
 function addEvents() {
     document.getElementById('file').addEventListener("change", processFile, false);
-    document.getElementById('fileToRetrieve').addEventListener("click", retrieveFile, false);
-    document.getElementById('clear').addEventListener("click", clearStorage, false);
+    //document.getElementById('fileToRetrieve').addEventListener("click", retrieveFile, false);
+   // document.getElementById('clear').addEventListener("click", clearStorage, false);
 }
 function processFile()
 {
     var file = document.getElementById('file').files[0];
     writeFileToStorage(file)
-    window.alert("process file")
 }
 function writeFileToStorage(file)
 {
-    window.alert("write to storage")
     var reader = new FileReader();
     reader.onload = function () {
         var img = new Image();

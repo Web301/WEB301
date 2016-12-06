@@ -78,25 +78,18 @@
                             CausesValidation="False" CssClass="btn" OnClick="btnCheckOut_Click" />
                     </div>
                 </div>
-                <div>
+                <div ID="hidden">
+                   
                     <%--<p>Twitter message:<br /><asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>--%>
 
                    <%-- <asp:Label ID="lblSelImage" runat="server" Text="Label" Visible="false">Select Image
                     <asp:FileUpload runat="server" ID="FileUpload1" Visible="false" OnClick="FileUpload1_Load" /></asp:Label>--%>
-                    <input type="file" accept="image/*" id="file"/>
-                    <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick="btnUpload_Click"  /><hr />
-                    <canvas id="canvas1" height="200" width="200"></canvas>
-                    <%--<asp:Label ID="lblResult" runat="server" EnableViewState="true" />--%>
+                    <input type="file" runat="server" visible="false" accept="image/*" ID="file"/>
+                    <asp:Button ID="btnUpload" runat="server" visible="false" Text="Upload" OnClick="btnUpload_Click"  /><hr />
+                    <canvas id="canvas1"  visible="false" height="200" width="200"></canvas>
+                   <a href="#" class="button button-primary" visible="false" runat="server" ID="btnDownload" download="my-file-name.png">Save your image to Order</a>
                 </div>
             </div>
             <%-- end of row 2 --%>
         </div>
-   <%-- <script>
-document.getElementById("#btnUpload").addEventListener("click", function(event){
-    event.preventDefault()
-});
-</script>--%>
-    <script>
- 
-    </script>
 </asp:Content>

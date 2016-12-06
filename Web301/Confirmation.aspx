@@ -20,6 +20,7 @@
                     CssClass="btn" OnClick="btnUpload_Click" />
             <p>Twitter message:<br /><asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>
             <asp:Label ID="lblResult" runat="server" EnableViewState="true" />
+     <%--<asp:FileUpload runat="server" ID="FileUpload1" Visible="false" OnClick="FileUpload1_Load" /></asp:Label>--%>
         </div>
     </div>
 

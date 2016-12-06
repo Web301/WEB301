@@ -49,7 +49,7 @@
                     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="col-xs-4" ">
-                    <iframe width="340" height="5140" style="border: solid 2px black;" src="http://instagram.com/p/qbq6fIJMVZ/embed"></iframe>
+                    <iframe width="340" height="514" style="border: solid 2px black;" src="http://instagram.com/p/a6wxu4RHm1/embed"></iframe>
                 </div>
             </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [AspProducts]"></asp:SqlDataSource>
