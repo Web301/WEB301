@@ -16,11 +16,13 @@
                     CssClass="btn" OnClick="btnContinue_Click" />
             <br /><br /><br />  
                     
-            <asp:Button ID="btnUpload" runat="server" Text="Tweet your Order!" 
-                    CssClass="btn" OnClick="btnUpload_Click" />
-            <p>Twitter message:<br /><asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>
+            <asp:FileUpload runat="server" ID="FileUpload1" runat="server" />
+            <p>Twitter message:<br />
+                <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="5" Columns="50" /></p>
             <asp:Label ID="lblResult" runat="server" EnableViewState="true" />
-     <%--<asp:FileUpload runat="server" ID="FileUpload1" Visible="false" OnClick="FileUpload1_Load" /></asp:Label>--%>
+     
+            <asp:Button ID="btnUpload2" runat="server" Text="Tweet your Order!" 
+                    CssClass="btn" OnClick="btnUpload2_Click" />
         </div>
     </div>
 

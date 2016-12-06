@@ -13,6 +13,7 @@ public class Customer
     public string City { get; set; }
     public string State { get; set; }
     public string Zip { get; set; }
+    public string PersonalisedImage { get; set; }
     public string ShippingMethod { get; set; }
     public string CardType { get; set; }
     public string CardNumber { get; set; }

@@ -28,7 +28,7 @@ namespace Web301
             string url = ConfigurationManager.AppSettings["UnsecurePath"] + "Order.aspx";
             Response.Redirect(url);
         }
-        protected void btnUpload_Click(object sender, EventArgs e)
+        protected void btnUpload2_Click(object sender, EventArgs e)
         {
 
 
@@ -40,14 +40,14 @@ namespace Web301
         string message = txtMessage.Text.Trim();
          //check if file is there, upload it
         string imagePath = string.Empty;
-        //if (FileUpload1.HasFile)
-        //{
-        //    string fileName = System.IO.Path.GetFileName(FileUpload1.FileName);
-        //    imagePath = Server.MapPath("~/Images/" + fileName);
-        //    FileUpload1.SaveAs(imagePath);
-        //}
+            if (FileUpload1.HasFile)
+            {
+                string fileName = System.IO.Path.GetFileName(FileUpload1.FileName);
+                imagePath = Server.MapPath("~/Images/" + fileName);
+                FileUpload1.SaveAs(imagePath);
+            }
 
-        var service = new TweetSharp.TwitterService(key, secret);
+            var service = new TweetSharp.TwitterService(key, secret);
         service.AuthenticateWith(token, tokenSecret);
 
         // Tweet wtih image

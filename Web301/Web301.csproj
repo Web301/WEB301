@@ -244,7 +244,6 @@
     <Content Include="Content\owl.theme.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
@@ -257,7 +256,6 @@
     <Content Include="Images\Logo_TV_2015.png" />
     <Content Include="Images\Products\t1.jpg" />
     <Content Include="Images\Products\t10.jpg" />
-    <Content Include="fonts\t3.png" />
     <Content Include="Images\Products\t3.png" />
     <Content Include="Images\Products\t4.JPG" />
     <Content Include="Images\Products\t5.jpg" />

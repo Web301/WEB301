@@ -3,118 +3,126 @@
 <%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
-       
 
-            <div class="form-group">
-                <label class="control-label col-sm-2">First Name:</label>
-                <div class="col-sm-5">
-                    <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="col-sm-5">
-                    <asp:RequiredFieldValidator ID="rfvFirstName" runat="server"
-                        ErrorMessage="Required" CssClass="text-danger"
-                        Display="Dynamic" ControlToValidate="txtFirstName"></asp:RequiredFieldValidator>
-                </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2">First Name:</label>
+            <div class="col-sm-5">
+                <asp:textbox id="txtFirstName" runat="server" cssclass="form-control"></asp:textbox>
             </div>
-
-            <div class="form-group">
-                <label class="control-label col-sm-2">Last Name:</label>
-                <div class="col-sm-5">
-                    <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="col-sm-5">
-                    <asp:RequiredFieldValidator ID="rfvLastName" runat="server"
-                        ErrorMessage="Required" CssClass="text-danger"
-                        Display="Dynamic" ControlToValidate="txtLastName"></asp:RequiredFieldValidator>
-                </div>
+            <div class="col-sm-5">
+                <asp:requiredfieldvalidator id="rfvFirstName" runat="server"
+                    errormessage="Required" cssclass="text-danger"
+                    display="Dynamic" controltovalidate="txtFirstName"></asp:requiredfieldvalidator>
             </div>
+        </div>
 
-            <div class="form-group">
-                <label class="control-label col-sm-2">Email</label>
-                <div class="col-sm-5">
-                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="col-sm-5">
-                    <asp:RequiredFieldValidator ID="rfvEmail" runat="server"
-                        ErrorMessage="Required" CssClass="text-danger"
-                        Display="Dynamic" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Please Enter a Valid Email" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Last Name:</label>
+            <div class="col-sm-5">
+                <asp:textbox id="txtLastName" runat="server" cssclass="form-control"></asp:textbox>
             </div>
-
-            <div class="form-group">
-                <label class="control-label col-sm-2">Address</label>
-                <div class="col-sm-5">
-                    <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="col-sm-5">
-                    <asp:RequiredFieldValidator ID="rfvAddress" runat="server"
-                        ErrorMessage="Required" CssClass="text-danger"
-                        Display="Dynamic" ControlToValidate="txtAddress"></asp:RequiredFieldValidator>
-                </div>
+            <div class="col-sm-5">
+                <asp:requiredfieldvalidator id="rfvLastName" runat="server"
+                    errormessage="Required" cssclass="text-danger"
+                    display="Dynamic" controltovalidate="txtLastName"></asp:requiredfieldvalidator>
             </div>
+        </div>
 
-            <div class="form-group">
-                <label class="control-label col-sm-2">City</label>
-                <div class="col-sm-5">
-                    <asp:TextBox ID="txtCity" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="col-sm-5">
-                    <asp:RequiredFieldValidator ID="rfvCity" runat="server"
-                        ErrorMessage="Required" CssClass="text-danger"
-                        Display="Dynamic" ControlToValidate="txtCity"></asp:RequiredFieldValidator>
-                </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Email</label>
+            <div class="col-sm-5">
+                <asp:textbox id="txtEmail" runat="server" cssclass="form-control"></asp:textbox>
             </div>
+            <div class="col-sm-5">
+                <asp:requiredfieldvalidator id="rfvEmail" runat="server"
+                    errormessage="Required" cssclass="text-danger"
+                    display="Dynamic" controltovalidate="txtEmail"></asp:requiredfieldvalidator>
+                <asp:regularexpressionvalidator id="RegularExpressionValidator1" runat="server" errormessage="Please Enter a Valid Email" controltovalidate="txtEmail" validationexpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:regularexpressionvalidator>
+            </div>
+        </div>
 
-            <div class="form-group">
-                <label class="control-label col-sm-2">County</label>
-                <div class="col-sm-5">
-                    <%--<asp:TextBox ID="txtState" runat="server" CssClass="form-control"></asp:TextBox>--%>
-                    <asp:DropDownList ID="ddlCounties" runat="server" DataSourceID="SqlDataSource1" DataTextField="CountyName" DataValueField="CountyCode" CssClass="form-control" Width="98%"></asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Counties] ORDER BY [CountyName]"></asp:SqlDataSource>
-                </div>
-                <div class="col-sm-5">
-                    <%--<asp:RequiredFieldValidator ID="rfvState" runat="server"
+        <div class="form-group">
+            <label class="control-label col-sm-2">Address</label>
+            <div class="col-sm-5">
+                <asp:textbox id="txtAddress" runat="server" cssclass="form-control"></asp:textbox>
+            </div>
+            <div class="col-sm-5">
+                <asp:requiredfieldvalidator id="rfvAddress" runat="server"
+                    errormessage="Required" cssclass="text-danger"
+                    display="Dynamic" controltovalidate="txtAddress"></asp:requiredfieldvalidator>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2">City</label>
+            <div class="col-sm-5">
+                <asp:textbox id="txtCity" runat="server" cssclass="form-control"></asp:textbox>
+            </div>
+            <div class="col-sm-5">
+                <asp:requiredfieldvalidator id="rfvCity" runat="server"
+                    errormessage="Required" cssclass="text-danger"
+                    display="Dynamic" controltovalidate="txtCity"></asp:requiredfieldvalidator>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2">County</label>
+            <div class="col-sm-5">
+                <%--<asp:TextBox ID="txtState" runat="server" CssClass="form-control"></asp:TextBox>--%>
+                <asp:dropdownlist id="ddlCounties" runat="server" datasourceid="SqlDataSource1" datatextfield="CountyName" datavaluefield="CountyCode" cssclass="form-control" width="98%"></asp:dropdownlist>
+                <asp:sqldatasource id="SqlDataSource1" runat="server" connectionstring="<%$ ConnectionStrings:DefaultConnection %>" selectcommand="SELECT * FROM [Counties] ORDER BY [CountyName]"></asp:sqldatasource>
+            </div>
+            <div class="col-sm-5">
+                <%--<asp:RequiredFieldValidator ID="rfvState" runat="server"
                         ErrorMessage="Required" CssClass="text-danger"
                         Display="Dynamic" ControlToValidate="txtState"></asp:RequiredFieldValidator>--%>
-                </div>
             </div>
+        </div>
 
-            <div class="form-group">
-                <label class="control-label col-sm-2">Post Code</label>
-                <div class="col-sm-5">
-                    <asp:TextBox ID="txtZip" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="col-sm-5">
-                    <asp:RequiredFieldValidator ID="rfvZip" runat="server"
-                        ErrorMessage="Required" CssClass="text-danger"
-                        Display="Dynamic" ControlToValidate="txtZip"></asp:RequiredFieldValidator>
-                </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Post Code</label>
+            <div class="col-sm-5">
+                <asp:textbox id="txtZip" runat="server" cssclass="form-control"></asp:textbox>
             </div>
-
-            <div class="form-group">
-                <label class="control-label col-sm-2">Phone</label>
-                <div class="col-sm-5">
-                    <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control"></asp:TextBox>
-                </div>
-                <div class="col-sm-5">
-                    <asp:RequiredFieldValidator ID="rfvPhone" runat="server"
-                        ErrorMessage="Required" CssClass="text-danger"
-                        Display="Dynamic" ControlToValidate="txtPhone"></asp:RequiredFieldValidator>
-                </div>
+            <div class="col-sm-5">
+                <asp:requiredfieldvalidator id="rfvZip" runat="server"
+                    errormessage="Required" cssclass="text-danger"
+                    display="Dynamic" controltovalidate="txtZip"></asp:requiredfieldvalidator>
             </div>
-      
+        </div>
 
-
+        <div class="form-group">
+            <label class="control-label col-sm-2">Phone</label>
+            <div class="col-sm-5">
+                <asp:textbox id="txtPhone" runat="server" cssclass="form-control"></asp:textbox>
+            </div>
+            <div class="col-sm-5">
+                <asp:requiredfieldvalidator id="rfvPhone" runat="server"
+                    errormessage="Required" cssclass="text-danger"
+                    display="Dynamic" controltovalidate="txtPhone"></asp:requiredfieldvalidator>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Personalised Image</label>
+            <div class="col-sm-5">
+                <asp:fileupload runat="server" id="FileUpload1"  onclick="FileUpload1_Load" />
+            </div>
+            <div class="col-sm-5">
+                <asp:requiredfieldvalidator id="RequiredFieldValidator1" runat="server"
+                    errormessage="Required" cssclass="text-danger"
+                    display="Dynamic" controltovalidate="txtPhone"></asp:requiredfieldvalidator>
+            </div>
+        </div>
 
 
         <div class="col-sm-offset-2 col-sm-10">
-            <asp:Button ID="btnCheckOut" runat="server" Text="Continue Checkout"
-                CssClass="btn" OnClick="btnCheckOut_Click" />
-            <asp:Button ID="btnCancel" runat="server" Text="Cancel Order"
-                CausesValidation="False" CssClass="btn" OnClick="btnCancel_Click" />
-            <asp:Button ID="btnContinue" runat="server" Text="Continue Shopping"
-                CausesValidation="False" CssClass="btn" OnClick="btnContinue_Click" />
+            <asp:button id="btnCheckOut" runat="server" text="Continue Checkout"
+                cssclass="btn" onclick="btnCheckOut_Click" />
+            <asp:button id="btnCancel" runat="server" text="Cancel Order"
+                causesvalidation="False" cssclass="btn" onclick="btnCancel_Click" />
+            <asp:button id="btnContinue" runat="server" text="Continue Shopping"
+                causesvalidation="False" cssclass="btn" onclick="btnContinue_Click" />
         </div>
     </div>
 </asp:Content>

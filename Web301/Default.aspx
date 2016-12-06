@@ -45,7 +45,7 @@
                         scrolling="yes" style="border: solid 2px black; overflow: hidden; width: 340px; height: 514px; background: white; float: left;" allowtransparency="true"></iframe>
                 </div>
                 <div class="col-xs-4" style="border: solid 2px black;">
-                    <a class="twitter-timeline" href="https://twitter.com/clairesligo">Tweets by clairesligo</a>
+                    <a class="twitter-timeline" href="https://twitter.com/paull1068">Tweets by clairesligo</a>
                     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="col-xs-4" ">

@@ -1,15 +1,28 @@
 // JavaScript Document
 $(document).ready(function () {
-    $('btnDownload').on("click", function (event) {
-        event.preventDefault()
-    });
+    //$('#MainContent_btnDownload').on("click", function (event) {
+    //    event.preventDefault()
+    //});
     $('#MainContent_btnUpload').on("click", function (event) {
         event.preventDefault()
     });
-
+    $("#MainContent_file").change(function () {
+        var file = document.getElementById("MainContent_file").files[0];
+        //writeFileToStorage(file)
+        var reader = new FileReader();
+        reader.onload = function () {
+            var img = new Image();
+            img.src = reader.result;
+            console.log(img.src);
+            localStorage.setItem("myFile", img.src);
+        }
+        reader.onerror = function () {
+            alert("There was an error reading the file");
+        }
+        reader.readAsDataURL(file);
+    });
     $("#MainContent_btnUpload").on("click", function () {
         var canvas = document.getElementById("canvas1");
-        canvas.style.backgroundColor = "lightblue";
         var context = canvas.getContext('2d');
         var imageObj1 = new Image();
         imageObj1.src = "/Images/Products/ut-shirt-plain.jpeg";
@@ -21,46 +34,44 @@ $(document).ready(function () {
         imageObj2.onload = function () {
         context.drawImage(imageObj2, 50, 60, 100, 100);
         var img = canvas.toDataURL("image/png");
-        $("#canvas1").html('<img src="' + img + '" width="200" height="200"/>')
-           
+        $("#canvas1").html('<img src="' + img + '" width="200" height="200"/>')   
         };
-        var button = document.getElementById('btnDownload');
-        button.addEventListener('click', function (e) {
-            var dataURL = canvas.toDataURL('image/png');
-            button.href = dataURL;
-        });
+    $("#MainContent_btnDownload").on("click", function(){
+    var canvas = document.getElementById("canvas1");
+    var button = document.getElementById("MainContent_btnDownload");
+    //button.addEventListener("click", function (e) {
+        var dataURL = canvas.toDataURL('image/png');
+        button.href = dataURL;
+
     });
-    $("#file").change(function () {
-        var file = document.getElementById("file").files[0];
-        writeFileToStorage(file)
     });
 });
 
-function addEvents() {
-    document.getElementById("file").addEventListener("change", processFile, false);
-    document.getElementById('fileToRetrieve').addEventListener("click", retrieveFile, false);
-    document.getElementById('clear').addEventListener("click", clearStorage, false);
-}
-function processFile()
-{
-    var file = document.getElementById('file').files[0];
-    writeFileToStorage(file)
-}
-function writeFileToStorage(file)
-{
-    var reader = new FileReader();
-    reader.onload = function () {
-        var img = new Image();
-        img.src = reader.result;
-        console.log(img.src);
-        localStorage.setItem("myFile", img.src);
-    }
-    reader.onerror = function ()
-    {
-        alert("There was an error reading the file");
-    }
-    reader.readAsDataURL(file);
-}
+//function addEvents() {
+//    //document.getElementById("file").addEventListener("change", processFile, false);
+//    //document.getElementById('fileToRetrieve').addEventListener("click", retrieveFile, false);
+//    //document.getElementById('clear').addEventListener("click", clearStorage, false);
+//}
+//function processFile()
+//{
+//    var file = document.getElementById('file').files[0];
+//    writeFileToStorage(file)
+//}
+//function writeFileToStorage(file)
+//{
+//    var reader = new FileReader();
+//    reader.onload = function () {
+//        var img = new Image();
+//        img.src = reader.result;
+//        console.log(img.src);
+//        localStorage.setItem("myFile", img.src);
+//    }
+//    reader.onerror = function ()
+//    {
+//        alert("There was an error reading the file");
+//    }
+//    reader.readAsDataURL(file);
+//}
 function retrieveFile() {
     window.alert("retrieve file")
     var file = localStorage.getItem("myFile");

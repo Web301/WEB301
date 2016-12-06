@@ -30,8 +30,16 @@ namespace Web301
 
         protected void btnCheckOut_Click(object sender, EventArgs e)
         {
+            
             if (IsValid)
             {
+                string imagePath = string.Empty;
+                if (FileUpload1.HasFile)
+                {
+                    string fileName = System.IO.Path.GetFileName(FileUpload1.FileName);
+                    imagePath = Server.MapPath("~/Images/" + fileName);
+                    FileUpload1.SaveAs(imagePath);
+                }
                 var customer = new Customer();
                 customer.FirstName = txtFirstName.Text;
                 customer.LastName = txtLastName.Text;
@@ -41,7 +49,9 @@ namespace Web301
                 customer.State = ddlCounties.Text;
                 customer.Zip = txtZip.Text;
                 customer.Phone = txtPhone.Text;
+                customer.PersonalisedImage = imagePath;
                 Session["Customer"] = customer;
+               
                 Response.Redirect("~/CheckOut2.aspx");
             }  
         }
