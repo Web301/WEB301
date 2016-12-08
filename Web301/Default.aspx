@@ -44,12 +44,12 @@
                     <iframe src="https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FT-shirts-r-us-personalized-and-Printed-t-shirts-1011529745549476&width=340&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=514"
                         scrolling="yes" style="border: solid 2px black; overflow: hidden; width: 340px; height: 514px; background: white; float: left;" allowtransparency="true"></iframe>
                 </div>
-                <div class="col-xs-4" style="border: solid 2px black;">
-                    <a class="twitter-timeline" href="https://twitter.com/paull1068">Tweets by clairesligo</a>
+                <div class="col-xs-4" style="border: solid 2px black;height: 514px;">
+                    <a class="twitter-timeline" style="height: 514px;" scrolling="yes" href="https://twitter.com/paull1068">Tweets by clairesligo</a>
                     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="col-xs-4" ">
-                    <iframe width="340" height="514" style="border: solid 2px black;" src="http://instagram.com/p/a6wxu4RHm1/embed"></iframe>
+                    <iframe width="340" height="514" style="border: solid 2px black;" src="https://instagram.com/p/a6wxu4RHm1/embed"></iframe>
                 </div>
             </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [AspProducts]"></asp:SqlDataSource>

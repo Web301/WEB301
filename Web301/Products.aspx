@@ -19,7 +19,7 @@
                                     <%# Eval("ProductLongDescription") %>
                                 </p>
                             </div>
-                            <a class="btn btn-default" href="Order.aspx">Order Now</a>
+                            <a class="btn btn-success" href="Order.aspx">Order Now</a>
                         </div>
                     </div>
                 </ItemTemplate>

@@ -66,11 +66,11 @@
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <asp:Button ID="btnAccept" runat="server" Text="Accept Order" 
-                CssClass="btn" OnClick="btnAccept_Click" />
+                CssClass="btn btn-success" OnClick="btnAccept_Click" Width="155px" />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel Order" 
-                CausesValidation="False" CssClass="btn" OnClick="btnCancel_Click" />
+                CausesValidation="False" CssClass="btn btn-danger" style="margin-left:2em" OnClick="btnCancel_Click" Width="155px" />
             <asp:Button ID="btnContinue" runat="server" Text="Continue Shopping" 
-                CausesValidation="False" CssClass="btn" OnClick="btnContinue_Click" />
+                CausesValidation="False" CssClass="btn" style="margin-left:2em" OnClick="btnContinue_Click" Width="157px" />
         </div>
     </div>
 </div>

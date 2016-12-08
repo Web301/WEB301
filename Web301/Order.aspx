@@ -71,11 +71,11 @@
                 <div class="form-group">
                     <div class="col-sm-12">
                         <asp:Button ID="btnAdd" runat="server" Text="Add to Cart"
-                            OnClick="btnAdd_Click" CssClass="btn" />
+                            OnClick="btnAdd_Click" CssClass="btn btn-primary" Width="115px" />
                         <asp:Button ID="btnCart" runat="server" Text="Go to Cart"
-                            PostBackUrl="~/Cart.aspx" CausesValidation="False" CssClass="btn" />
+                            PostBackUrl="~/Cart.aspx" CausesValidation="False" CssClass="btn btn-info" style="margin-left:2em" Width="115px" />
                         <asp:Button ID="btnCheckOut" runat="server" Text="Check Out"
-                            CausesValidation="False" CssClass="btn" OnClick="btnCheckOut_Click" />
+                            CausesValidation="False" CssClass="btn btn-success" style="margin-left:2em" OnClick="btnCheckOut_Click" Width="128px" />
                     </div>
                 </div>
                 <div ID="hidden">
@@ -85,7 +85,7 @@
                    <%-- <asp:Label ID="lblSelImage" runat="server" Text="Label" Visible="false">Select Image
                     <asp:FileUpload runat="server" ID="FileUpload1" Visible="false" OnClick="FileUpload1_Load" /></asp:Label>--%>
                     <input type="file" runat="server" visible="false" accept="image/*" id="file"/>
-                    <asp:Button ID="btnUpload" runat="server" visible="false" Text="Upload" OnClick="btnUpload_Click"  /><hr />
+                    <asp:Button ID="btnUpload" runat="server" visible="false" Text="Upload" OnClick="btnUpload_Click" Width="68px"  /><hr />
                     <canvas id="canvas1"  visible="false" height="200" width="200"></canvas>
                    <a href="#" class="button button-primary" visible="false" runat="server" ID="btnDownload" download="my-file-name.png">Save your image to Order</a>
                 </div>

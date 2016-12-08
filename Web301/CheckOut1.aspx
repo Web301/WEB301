@@ -116,13 +116,14 @@
         </div>
 
 
-        <div class="col-sm-offset-2 col-sm-10">
-            <asp:button id="btnCheckOut" runat="server" text="Continue Checkout"
-                cssclass="btn" onclick="btnCheckOut_Click" />
+        <div class="col-sm-10">
+            
             <asp:button id="btnCancel" runat="server" text="Cancel Order"
-                causesvalidation="False" cssclass="btn" onclick="btnCancel_Click" />
+                causesvalidation="False" cssclass="btn btn-danger" onclick="btnCancel_Click" Width="142px" />
             <asp:button id="btnContinue" runat="server" text="Continue Shopping"
-                causesvalidation="False" cssclass="btn" onclick="btnContinue_Click" />
+                causesvalidation="False" style="margin-left:2em"  cssclass="btn" onclick="btnContinue_Click" Width="156px" />
+            <asp:button id="btnCheckOut" runat="server" text="Continue Checkout"
+                cssclass="btn btn-success" style="margin-left:2em"  onclick="btnCheckOut_Click" Width="159px" />
         </div>
     </div>
 </asp:Content>
