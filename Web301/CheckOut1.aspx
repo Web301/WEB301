@@ -3,7 +3,33 @@
 <%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
-
+        <asp:sqldatasource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" DeleteCommand="DELETE FROM [Customers] WHERE [Email] = @Email" InsertCommand="INSERT INTO [Customers] ([Email], [FirstName], [LastName], [Address1], [City], [County], [PostCode], [PhoneNumber], [PersonalisedImage]) VALUES (@Email, @FirstName, @LastName, @Address1, @City, @County, @PostCode, @PhoneNumber, @PersonalisedImage)" SelectCommand="SELECT * FROM [Customers]" UpdateCommand="UPDATE [Customers] SET [FirstName] = @FirstName, [LastName] = @LastName, [Address1] = @Address1, [City] = @City, [County] = @County, [PostCode] = @PostCode, [PhoneNumber] = @PhoneNumber, [PersonalisedImage] = @PersonalisedImage WHERE [Email] = @Email">
+            <DeleteParameters>
+                <asp:Parameter Name="Email" Type="String" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="Email" Type="String" />
+                <asp:Parameter Name="FirstName" Type="String" />
+                <asp:Parameter Name="LastName" Type="String" />
+                <asp:Parameter Name="Address1" Type="String" />
+                <asp:Parameter Name="City" Type="String" />
+                <asp:Parameter Name="County" Type="String" />
+                <asp:Parameter Name="PostCode" Type="String" />
+                <asp:Parameter Name="PhoneNumber" Type="String" />
+                <asp:Parameter Name="PersonalisedImage" Type="Object" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="FirstName" Type="String" />
+                <asp:Parameter Name="LastName" Type="String" />
+                <asp:Parameter Name="Address1" Type="String" />
+                <asp:Parameter Name="City" Type="String" />
+                <asp:Parameter Name="County" Type="String" />
+                <asp:Parameter Name="PostCode" Type="String" />
+                <asp:Parameter Name="PhoneNumber" Type="String" />
+                <asp:Parameter Name="PersonalisedImage" Type="Object" />
+                <asp:Parameter Name="Email" Type="String" />
+            </UpdateParameters>
+        </asp:sqldatasource>
 
         <div class="form-group">
             <label class="control-label col-sm-2">First Name:</label>
@@ -125,5 +151,6 @@
             <asp:button id="btnCheckOut" runat="server" text="Continue Checkout"
                 cssclass="btn btn-success" style="margin-left:2em"  onclick="btnCheckOut_Click" Width="159px" />
         </div>
+        <asp:Label ID="lblError" runat="server" ></asp:Label>
     </div>
 </asp:Content>
