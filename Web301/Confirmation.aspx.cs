@@ -11,7 +11,7 @@ using TweetSharp;
 namespace Web301
 {
     public partial class Confirmation : System.Web.UI.Page
-    {
+    {//Claires code for breadcrumbs and header
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.AddBreadcrumbLink("/Confirmation.aspx", "Home");
@@ -28,6 +28,7 @@ namespace Web301
             string url = ConfigurationManager.AppSettings["UnsecurePath"] + "Order.aspx";
             Response.Redirect(url);
         }
+        //Puals code for twitter and claires code for upload picture
         protected void btnUpload2_Click(object sender, EventArgs e)
         {
 
@@ -50,7 +51,7 @@ namespace Web301
             var service = new TweetSharp.TwitterService(key, secret);
         service.AuthenticateWith(token, tokenSecret);
 
-        // Tweet wtih image
+        //Paul- Tweet with image
         if (imagePath.Length > 0)
         {
             using (var stream = new FileStream(imagePath, FileMode.Open))

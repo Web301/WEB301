@@ -10,7 +10,7 @@ using System.IO;
 namespace Web301
 {
     public partial class Products : System.Web.UI.Page
-    {
+    {//Claires code for breadcrumbs and header
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.AddBreadcrumbLink("/Order.aspx", "Home");
@@ -19,7 +19,7 @@ namespace Web301
             Master.HeaderText = header;
             Master.AddCurrentPage("Products");
             Repeater1.DataSourceID = "SqlDataSource1";
-
+            //claires code for reapeater to read from DB
             if (!IsPostBack)
             {
                 string[] filePaths = Directory.GetFiles(Server.MapPath("~/Images/"));

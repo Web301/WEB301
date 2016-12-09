@@ -11,7 +11,7 @@ namespace Web301
     public partial class CheckOut1 : System.Web.UI.Page
     {
         //string subTotal = "";
-
+        //Claires code for breadcrumbs and header
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.AddBreadcrumbLink("/CheckOut1.aspx", "Home");
@@ -52,6 +52,7 @@ namespace Web301
                 customer.PersonalisedImage = imagePath;
                 Session["Customer"] = customer;
 
+                //Claires code for insert to Database
                 //puts the variables into certain columns of table
                 SqlDataSource.InsertParameters["Email"].DefaultValue = txtEmail.Text;
                 SqlDataSource.InsertParameters["FirstName"].DefaultValue = txtFirstName.Text;
@@ -70,7 +71,7 @@ namespace Web301
                 }
                 catch (Exception ex)//if error occurs shows a message
                 {
-                    lblError.Text = "A database error has occured " + "Message: " + ex.Message;
+                    lblError.Text = "A database error has occured " + ex.Message;
                 }
             
         }

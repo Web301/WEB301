@@ -16,7 +16,7 @@
                 <asp:Parameter Name="County" Type="String" />
                 <asp:Parameter Name="PostCode" Type="String" />
                 <asp:Parameter Name="PhoneNumber" Type="String" />
-                <asp:Parameter Name="PersonalisedImage" Type="Object" />
+                <asp:Parameter Name="PersonalisedImage" Type="String" />
             </InsertParameters>
             <UpdateParameters>
                 <asp:Parameter Name="FirstName" Type="String" />
@@ -26,7 +26,7 @@
                 <asp:Parameter Name="County" Type="String" />
                 <asp:Parameter Name="PostCode" Type="String" />
                 <asp:Parameter Name="PhoneNumber" Type="String" />
-                <asp:Parameter Name="PersonalisedImage" Type="Object" />
+                <asp:Parameter Name="PersonalisedImage" Type="String" />
                 <asp:Parameter Name="Email" Type="String" />
             </UpdateParameters>
         </asp:sqldatasource>

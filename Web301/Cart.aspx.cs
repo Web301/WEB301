@@ -15,7 +15,7 @@ namespace Web301
         static CartEventListener cartPrice = new CartEventListener(Message, ThresholdValue);//*** ADDED BY PAUL
 
         private CartItemList cart;
-
+        //Claires & Pauls code
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.AddBreadcrumbLink("/Cart.aspx", "Home");

@@ -16,7 +16,7 @@ namespace Web301
     public partial class Order : System.Web.UI.Page
     {
         private Product selectedProduct;
-
+        //Claires code for breadcrumbs and header
         protected void Page_Load(object sender, EventArgs e)
         {      
             string header = "Order";
@@ -29,6 +29,7 @@ namespace Web301
                 Master.AddBreadcrumbLink("/Order.aspx", "Order");
                 Master.AddCurrentPage("Order");
             }
+            //Claire display products
             // get and show product data on every load
             selectedProduct = this.GetSelectedProduct();
             lblName.Text = selectedProduct.Name;
@@ -37,7 +38,7 @@ namespace Web301
             lblUnitPrice.Text = selectedProduct.UnitPrice.ToString("c") + " each";
             imgProduct.ImageUrl = "Images/Products/" + selectedProduct.ImageFile;
         }
-
+        //code for displaying products from drop down list
         private Product GetSelectedProduct()
         {
             // get row from SqlDataSource based on value in dropdownlist
@@ -85,7 +86,7 @@ namespace Web301
             string url = ConfigurationManager.AppSettings["SecurePath"] + "CheckOut1.aspx";
             Response.Redirect(url);
         }
-
+        //claires code if personailised is  not selected box for upload is not visable
         protected void ddlProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
 

@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 namespace Web301
 {
     public partial class CheckOut2 : System.Web.UI.Page
-    {
+    {    //Claires code for breadcrumbs and header
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.AddBreadcrumbLink("/CheckOut2.aspx", "Home");

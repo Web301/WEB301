@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 namespace Web301
 {
     public partial class About : Page
-    {
+    {    //Claires code
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.AddBreadcrumbLink("/About.aspx", "Home");

@@ -10,7 +10,7 @@ using Web301.Models;
 namespace Web301
 {
     public partial class _Default : Page
-    {
+    {//Claires code for breadcrumbs and header
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.AddBreadcrumbLink("/Default.aspx", "Home");
