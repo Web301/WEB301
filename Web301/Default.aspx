@@ -40,17 +40,18 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <div class="col-xs-12 col-md-4  embed-responsive embed-responsive-16by9">
+                <div class="col-xs-12 col-md-4" style="border: solid 2px black;">
                     <iframe src="https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FT-shirts-r-us-personalized-and-Printed-t-shirts-1011529745549476&width=340&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=642"
-                        scrolling="yes" class="embed-responsive-item" style="border: solid 2px black;   width: 340px; height: 642px; background: white;"></iframe>
+                        scrolling="yes" style="width: 340px; height: 642px; background: white;"></iframe>
                 </div>
-                <div class="col-xs-12 col-md-4  embed-responsive embed-responsive-16by9" style="border: solid 2px black;height: 642px;margin-left:-8px;">
-                  <span class="embed-responsive-item">  <a href="https://twitter.com/paull1068" class="twitter-timeline" style="width: 340px; height: 642px;"  scrolling="yes" ></a>
-                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></span>
+                <div class="col-xs-12 col-md-4" style="border: solid 2px black;">
+                    <a href="https://twitter.com/paull1068" class="twitter-timeline"style="width:340px;
+                    height: 642px;"  scrolling="yes" ></a>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
-                <div class="col-xs-12 col-md-4  embed-responsive embed-responsive-16by9" ">
+                <div class="col-xs-12 col-md-4" style="border: solid 2px black;" >
                     <iframe src="https://instagram.com/p/a6wxu4RHm1/embed"
-                         scrolling="yes" class="embed-responsive-item" style="border: solid 2px black; width:340px; height:642px; background: white; margin-left:25px;" ></iframe>
+                         scrolling="yes" style=" width:340px;height:642px; background: white;" ></iframe>
                 </div>
             </div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [AspProducts]"></asp:SqlDataSource>

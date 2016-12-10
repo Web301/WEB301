@@ -6,10 +6,10 @@
         <div class="row">
             <asp:Repeater ID="Repeater1" runat="server">
                 <ItemTemplate>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-xs-12">
                         <div class="thumbnail">
                             <img src='/Images/Products/<%# Eval("ImageFile") %>'
-                                alt='<%# Eval("ProductName") %>' style="max-height: 300px; min-height:300px" />
+                                alt='<%# Eval("ProductName") %>' class="img-responsive" style="max-height: 300px; min-height:300px" />
                             <div class="caption">
                                 <h3><%# Eval("ProductShortDescription") %></h3>
                                 <p>
