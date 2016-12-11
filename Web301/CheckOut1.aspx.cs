@@ -68,28 +68,28 @@ namespace Web301
                 customer.PersonalisedImage = imagePath;
                 Session["Customer"] = customer;
 
-                //Claires code for insert to Database
-                //puts the variables into certain columns of table
-                SqlDataSource.InsertParameters["Email"].DefaultValue = txtEmail.Text;
-                SqlDataSource.InsertParameters["FirstName"].DefaultValue = txtFirstName.Text;
-                SqlDataSource.InsertParameters["LastName"].DefaultValue = txtLastName.Text;
-                SqlDataSource.InsertParameters["Address1"].DefaultValue = txtAddress.Text;
-                SqlDataSource.InsertParameters["City"].DefaultValue = txtCity.Text;
-                SqlDataSource.InsertParameters["County"].DefaultValue = ddlCounties.Text;
-                SqlDataSource.InsertParameters["PostCode"].DefaultValue = txtZip.Text;
-                SqlDataSource.InsertParameters["PhoneNumber"].DefaultValue = txtPhone.Text;
-                SqlDataSource.InsertParameters["PersonalisedImage"].DefaultValue = imagePath;
-                try
-                {
-                    //tries to do the insert
-                    SqlDataSource.Insert();
-                    Response.Redirect("~/CheckOut2.aspx");//if successfull
-                }
-                catch (Exception ex)//if error occurs shows a message
-                {
-                    lblError.Text = "A database error has occured " + ex.Message;
-                }
-                //Response.Redirect("~/CheckOut2.aspx");
+                ////Claires code for insert to Database
+                ////puts the variables into certain columns of table
+                //SqlDataSource.InsertParameters["Email"].DefaultValue = txtEmail.Text;
+                //SqlDataSource.InsertParameters["FirstName"].DefaultValue = txtFirstName.Text;
+                //SqlDataSource.InsertParameters["LastName"].DefaultValue = txtLastName.Text;
+                //SqlDataSource.InsertParameters["Address1"].DefaultValue = txtAddress.Text;
+                //SqlDataSource.InsertParameters["City"].DefaultValue = txtCity.Text;
+                //SqlDataSource.InsertParameters["County"].DefaultValue = ddlCounties.Text;
+                //SqlDataSource.InsertParameters["PostCode"].DefaultValue = txtZip.Text;
+                //SqlDataSource.InsertParameters["PhoneNumber"].DefaultValue = txtPhone.Text;
+                //SqlDataSource.InsertParameters["PersonalisedImage"].DefaultValue = imagePath;
+                //try
+                //{
+                //    //tries to do the insert
+                //    SqlDataSource.Insert();
+                //    Response.Redirect("~/CheckOut2.aspx");//if successfull
+                //}
+                //catch (Exception ex)//if error occurs shows a message
+                //{
+                //    lblError.Text = "A database error has occured " + ex.Message;
+                //}
+                Response.Redirect("~/CheckOut2.aspx");
             }
     }
 

@@ -6,7 +6,7 @@
 <h1>HELLO WORLD!</h1>
 <h2>Update Products</h2>
     <ul>
-        <li class="badge" style="font-size:x-large"><a runat="server" href="~/Admin/Admin">Back To Admin</a></li>
+        <li class="btn btn-primary btn-xs" style="font-size:x-large"><a runat="server" href="~/Admin/Admin">Back To Admin</a></li>
     </ul>
 
 <div class="container">
@@ -16,7 +16,7 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
             </div>--%>
             <div class="form-group">
-                <div class="col-sm-12"><asp:GridView ID="GridView1" CssClass="table table-bordered table-responsive" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceProducts" DataKeyNames="ProductID">
+                <div class="col-sm-12"><asp:GridView ID="GridView1" CssClass="table table-bordered table-responsive table-hover" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceProducts" DataKeyNames="ProductID">
                     <Columns>
                         <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                         <asp:BoundField DataField="ProductID" HeaderText="ProductID" ReadOnly="True" SortExpression="ProductID" />

@@ -15,13 +15,13 @@
             <div class="form-horizontal">
                 <div class="col-sm-12">
                     <ul>
-                        <li class="badge" style="font-size:x-large"><a runat="server" href="~/Admin/Products">Products</a></li>
+                        <li class="btn btn-primary btn-xs" style="font-size:x-large"><a runat="server" href="~/Admin/Products">Products</a></li>
                     </ul><br/>
                     <ul>
-                        <li class="badge" style="font-size:x-large"><a runat="server" href="~/Admin/Customers">Customers</a></li>
+                        <li class="btn btn-primary btn-xs" style="font-size:x-large"><a runat="server" href="~/Admin/Customers">Customers</a></li>
                     </ul><br/>
                     <ul>
-                        <li class="badge" style="font-size:x-large"><a runat="server" href="#">Spare</a></li>
+                        <li class="btn btn-primary btn-xs" style="font-size:x-large"><a runat="server" href="#">Spare</a></li>
                     </ul>
                     <%--<asp:GridView ID="GridView1" CssClass="table table-bordered table-responsive" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceProducts" DataKeyNames="ProductID">
                     <Columns>

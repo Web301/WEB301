@@ -31,6 +31,9 @@ namespace Web301
                 Response.Redirect(url);
             }
 
+            cart = CartItemList.GetCart();
+            subTotal = cart.GetCartCost;
+
             GetShipping();
 
             DisplayOrderCost();
@@ -41,8 +44,6 @@ namespace Web301
 
         private void DisplayOrderCost()
         {
-            cart = CartItemList.GetCart();
-            subTotal = cart.GetCartCost;
             lblSubTotal.Text = string.Format("Order Sub-Total:\t {0:c2}", subTotal);
 
             if (shipping == 0)
@@ -61,7 +62,7 @@ namespace Web301
 
         private void GetShipping()
         {
-            if (subTotal > 50)
+            if (subTotal > 50 || subTotal <= 0)
                 shipping = 0;
             else
                 shipping = 10;
@@ -77,48 +78,8 @@ namespace Web301
                 cardMonth = expDate.Substring(0, 2);
                 cardYear = expDate.Substring(3, 2);
 
-
                 //WRITE TO DATABASE HERE
-
-                //Claires code for insert to Customer Table
-                //puts the variables into certain columns of table
-                //AMENDED 11/12 TO TAKE DETAILS FROM THE CUSTOMER OBJECT-PL
-                SqlDataSourceCustomer.InsertParameters["Email"].DefaultValue = customer.EmailAddress;
-                SqlDataSourceCustomer.InsertParameters["FirstName"].DefaultValue = customer.FirstName;
-                SqlDataSourceCustomer.InsertParameters["LastName"].DefaultValue = customer.LastName;
-                SqlDataSourceCustomer.InsertParameters["Address1"].DefaultValue = customer.Address;
-                SqlDataSourceCustomer.InsertParameters["City"].DefaultValue = customer.City;
-                SqlDataSourceCustomer.InsertParameters["County"].DefaultValue = customer.State;
-                SqlDataSourceCustomer.InsertParameters["PostCode"].DefaultValue = customer.Zip;
-                SqlDataSourceCustomer.InsertParameters["PhoneNumber"].DefaultValue = customer.Phone;
-                SqlDataSourceCustomer.InsertParameters["PersonalisedImage"].DefaultValue = customer.PersonalisedImage;
-
-                //Claires code for insert to SalesOrder Table
-                SqlDataSourceSalesOrders.InsertParameters["CustEmail"].DefaultValue = customer.EmailAddress;
-                SqlDataSourceSalesOrders.InsertParameters["SalesOrderDate"].DefaultValue = DateTime.Now.ToShortDateString();
-                SqlDataSourceSalesOrders.InsertParameters["Subtotal"].DefaultValue = subTotal.ToString();
-                SqlDataSourceSalesOrders.InsertParameters["ShippingMethod"].DefaultValue = "Standard";
-                SqlDataSourceSalesOrders.InsertParameters["Shipping"].DefaultValue = shipping.ToString();
-                SqlDataSourceSalesOrders.InsertParameters["Total"].DefaultValue = OrderTotal.ToString();
-                SqlDataSourceSalesOrders.InsertParameters["CreditCardType"].DefaultValue = customer.CardType;
-                SqlDataSourceSalesOrders.InsertParameters["CardNumber"].DefaultValue = customer.CardNumber;
-                SqlDataSourceSalesOrders.InsertParameters["ExpMonth"].DefaultValue = cardMonth;
-                SqlDataSourceSalesOrders.InsertParameters["ExpYear"].DefaultValue = cardYear;
-
-
-                try
-                {
-                    //tries to do the insert
-                    SqlDataSourceCustomer.Insert();
-                    SqlDataSourceSalesOrders.Insert();
-                }
-                catch (Exception ex)//if error occurs shows a message
-                {
-                    lblError.Text = "A database error has occured " + ex.Message;
-                }
-
-                Session.Remove("Cart");
-                Response.Redirect("~/Confirmation.aspx");
+                UpdateDatabase(customer);
             }
         }
 
@@ -144,6 +105,46 @@ namespace Web301
         {
             string url = ConfigurationManager.AppSettings["UnsecurePath"] + "Order.aspx";
             Response.Redirect(url);
+        }
+
+        private void UpdateDatabase(Customer customer)
+        {
+            //Claires code for insert to Customer Table
+            //puts the variables into certain columns of table
+            //AMENDED 11/12 TO TAKE DETAILS FROM THE CUSTOMER OBJECT-PL
+            SqlDataSourceCustomer.InsertParameters["Email"].DefaultValue = customer.EmailAddress;
+            SqlDataSourceCustomer.InsertParameters["FirstName"].DefaultValue = customer.FirstName;
+            SqlDataSourceCustomer.InsertParameters["LastName"].DefaultValue = customer.LastName;
+            SqlDataSourceCustomer.InsertParameters["Address1"].DefaultValue = customer.Address;
+            SqlDataSourceCustomer.InsertParameters["City"].DefaultValue = customer.City;
+            SqlDataSourceCustomer.InsertParameters["County"].DefaultValue = customer.State;
+            SqlDataSourceCustomer.InsertParameters["PostCode"].DefaultValue = customer.Zip;
+            SqlDataSourceCustomer.InsertParameters["PhoneNumber"].DefaultValue = customer.Phone;
+            SqlDataSourceCustomer.InsertParameters["PersonalisedImage"].DefaultValue = customer.PersonalisedImage;
+
+            //Pauls code for insert to SalesOrder Table
+            SqlDataSourceSalesOrders.InsertParameters["CustEmail"].DefaultValue = customer.EmailAddress;
+            SqlDataSourceSalesOrders.InsertParameters["SalesOrderDate"].DefaultValue = DateTime.Now.ToShortDateString();
+            SqlDataSourceSalesOrders.InsertParameters["Subtotal"].DefaultValue = subTotal.ToString();
+            SqlDataSourceSalesOrders.InsertParameters["ShippingMethod"].DefaultValue = "Standard";
+            SqlDataSourceSalesOrders.InsertParameters["Shipping"].DefaultValue = shipping.ToString();
+            SqlDataSourceSalesOrders.InsertParameters["Total"].DefaultValue = OrderTotal.ToString();
+            SqlDataSourceSalesOrders.InsertParameters["CreditCardType"].DefaultValue = customer.CardType;
+            SqlDataSourceSalesOrders.InsertParameters["CardNumber"].DefaultValue = customer.CardNumber;
+            SqlDataSourceSalesOrders.InsertParameters["ExpMonth"].DefaultValue = cardMonth;
+            SqlDataSourceSalesOrders.InsertParameters["ExpYear"].DefaultValue = cardYear;
+
+            try
+            {
+                //tries to do the insert
+                SqlDataSourceCustomer.Insert();
+                SqlDataSourceSalesOrders.Insert();
+                Response.Redirect("~/Confirmation.aspx");
+            }
+            catch (Exception ex)//if error occurs shows a message
+            {
+                lblError.Text = "A database error has occured " + ex.Message;
+            }
         }
     }
 }
