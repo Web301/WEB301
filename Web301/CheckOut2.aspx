@@ -5,10 +5,23 @@
 <div class="container">
     <div class="form-group">
             <div class="col-sm-6">
-                <asp:Label ID="lblOrderTotal" runat="server" EnableViewState="False"
-                    CssClass="badge col-sm-12" Font-Size="X-Large" ></asp:Label>               
+                <asp:Label ID="lblSubTotal" runat="server" EnableViewState="False"
+                    CssClass=" col-sm-12 label-success" Font-Size="X-Large" ></asp:Label>               
             </div>
     </div>
+    <div class="form-group">
+            <div class="col-sm-6">
+                <asp:Label ID="lblShipping" runat="server" EnableViewState="False"
+                    CssClass=" col-sm-12 label-success" Font-Size="X-Large" ></asp:Label>               
+            </div>
+    </div>
+    <div class="form-group">
+            <div class="col-sm-6">
+                <asp:Label ID="lblOrderTotal" runat="server" EnableViewState="False"
+                    CssClass=" col-sm-12 label-info" Font-Size="X-Large" ></asp:Label>               
+            </div>
+    </div>
+    
     <%--<h3>Shipping Method</h3>
     <div class="form-group">
         <label class="control-label col-sm-2">Choose one:</label>

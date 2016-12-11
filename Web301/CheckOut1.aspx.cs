@@ -10,7 +10,6 @@ namespace Web301
 {
     public partial class CheckOut1 : System.Web.UI.Page
     {
-        //string subTotal = "";
         //Claires code for breadcrumbs and header
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,8 +23,24 @@ namespace Web301
                 string url = ConfigurationManager.AppSettings["SecurePath"] + "CheckOut1.aspx";
                 Response.Redirect(url);
             }
-            //subTotal = (string)Session["SubTotal"];
-            //lblOrderTotal.Text += subTotal;
+
+            //PAULS CODE TO PERSIST THE CUSTOMER INFO IN THE FORM
+            if (!IsPostBack)
+            {
+                if (Session["Customer"] != null)
+                {
+                    var customer = (Customer)Session["Customer"];
+                    txtFirstName.Text = customer.FirstName;
+                    txtLastName.Text = customer.LastName;
+                    txtEmail.Text = customer.EmailAddress;
+                    txtAddress.Text = customer.Address;
+                    txtCity.Text = customer.City;
+                    ddlCounties.Text = customer.State;
+                    txtZip.Text = customer.Zip;
+                    txtPhone.Text = customer.Phone;
+                }
+                
+            }
         }
 
         protected void btnCheckOut_Click(object sender, EventArgs e)
@@ -40,6 +55,7 @@ namespace Web301
                     imagePath = Server.MapPath("~/Images/" + fileName);
                     FileUpload1.SaveAs(imagePath);
                 }
+                //SAVE THE INPUTTED INFO TO A CUSTOMER OBJECT - PL
                 var customer = new Customer();
                 customer.FirstName = txtFirstName.Text;
                 customer.LastName = txtLastName.Text;
@@ -73,8 +89,8 @@ namespace Web301
                 {
                     lblError.Text = "A database error has occured " + ex.Message;
                 }
-            
-        }
+                //Response.Redirect("~/CheckOut2.aspx");
+            }
     }
 
         protected void btnCancel_Click(object sender, EventArgs e)
