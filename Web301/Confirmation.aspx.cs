@@ -24,16 +24,17 @@ namespace Web301
             lblConfirm.Text = $"Thank you for your order, {customer.FirstName}! It will be shipped on {date}.";
 
             Session.Remove("Cart");
-            Session.Remove("Customer");
+            
         }
 
         protected void btnContinue_Click(object sender, EventArgs e)
         {
             string url = ConfigurationManager.AppSettings["UnsecurePath"] + "Order.aspx";
+            Session.Remove("Customer");
             Response.Redirect(url);
         }
 
-        //Puals code for twitter and claires code for upload picture
+        //Pauls code for twitter and claires code for upload picture
         protected void btnUpload2_Click(object sender, EventArgs e)
         {
             string key = "OVIhqFJyhxqBPMYuEe4PgH2Sw";

@@ -149,7 +149,7 @@
         <label class="control-label col-sm-2">Expiration date:</label>
         <div class="col-sm-5">
             <asp:TextBox ID="txtExpiration" runat="server" CssClass="form-control"></asp:TextBox>
-            <asp:regularexpressionvalidator runat="server" CssClass="text-danger" errormessage="Enter a Valid Date" ControlToValidate="txtExpiration" ValidationExpression="^((0[1-9])|(1[0-2]))\/((16)|([1][6-9])|([2][0-9]))$"></asp:regularexpressionvalidator>
+            <asp:regularexpressionvalidator runat="server" CssClass="text-danger" errormessage="Enter a Valid Date (eg 10/17)" ControlToValidate="txtExpiration" ValidationExpression="^((0[1-9])|(1[0-2]))\/((17)|([1][7-9])|([2][0-9]))$"></asp:regularexpressionvalidator>
         </div>
         <div class="col-sm-5">
             <asp:RequiredFieldValidator ID="rfvExpiration" runat="server" 

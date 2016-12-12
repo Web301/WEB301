@@ -36,7 +36,7 @@ namespace Web301
             //decimal itemTotal = (cart.Count * cart.GetCartCost);
             UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             // Assign the delegate to the composed delegate
-            // The Show message method is called when the TotalPrice exceeds a Threshold vlaue, in this case 150.
+            // The Show message method is called when the TotalPrice exceeds a Threshold vlaue, in this case 50.
             cartPrice.Exceeded += new CartEventListener.ThresholdExceededHandler(ShowMessage);
 
             cartPrice.AddPriceToTotal(cartTotal);
